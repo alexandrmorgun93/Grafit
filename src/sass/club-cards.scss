@@ -1,0 +1,42 @@
+.club_cards_section {
+  width: 100%;
+  position: relative;
+  margin-top: rem(150px);
+  h2 {
+    font-family: "Proxima Nova";
+    font-size: rem(60px);
+    font-weight: 700;
+    text-align: center;
+    color: #ffcc01;
+    text-transform: uppercase;
+  }
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    .club_card {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 rem(260px);
+      margin-left: rem(30px);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .card_text {
+        color: #1f1f1f;
+        font-family: 'Lato';
+        font-size: rem(17px);
+        font-weight: 400;
+      }
+      .card_price {
+        color: #1f1f1f;
+        font-family: "Proxima Nova";
+        font-size: rem(17px);
+        font-weight: 700;
+      }
+
+    }
+  }
+}

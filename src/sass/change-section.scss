@@ -1,7 +1,7 @@
 .change_section {
   width: 100%;
   position: relative;
-  padding: rem(115px) 0;
+  padding-top:rem(115px);
   display: flex;
   background-color: #fff;
   .change_img {
@@ -94,6 +94,7 @@
       font-weight:700;
       border: 3px solid #ffcc01;
       text-align: center;
+      transition: .4s;
         &:hover{
           background-color:#ffcc01 ;
           color: #ffffff;

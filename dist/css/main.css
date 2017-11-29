@@ -56,15 +56,6 @@ abbr, acronym {
   content: '';
   clear: both; }
 
-.body {
-  font-family: 'Proxima Nova';
-  font-size: 1.125rem; }
-
-.container {
-  max-width: 71.25rem;
-  width: 100%;
-  margin: 0 auto; }
-
 /*Lato*/
 @font-face {
   /*Lato-Bold*/
@@ -116,13 +107,19 @@ abbr, acronym {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-cancel:before {
+.icon-location:before {
   content: '\E800'; }
 
-.icon-location:before {
+.icon-phone:before {
   content: '\E801'; }
 
-.icon-phone:before {
+.icon-cancel:before {
+  content: '\E802'; }
+
+.icon-left-open:before {
+  content: '\E803'; }
+
+.icon-right-open:before {
   content: '\E804'; }
 
 .icon-facebook:before {
@@ -131,8 +128,19 @@ abbr, acronym {
 .icon-vkontakte:before {
   content: '\F189'; }
 
-.icon-instagram:before {
-  content: '\F32D'; }
+.icon-instagram-1:before {
+  content: '\F31E'; }
+
+.body {
+  font-family: 'Proxima Nova';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.125rem; }
+
+.container {
+  max-width: 73.125rem;
+  width: 100%;
+  margin: 0 auto; }
 
 /*Header*/
 .main_head {
@@ -401,7 +409,7 @@ abbr, acronym {
 .change_section {
   width: 100%;
   position: relative;
-  padding: 7.1875rem 0;
+  padding-top: 7.1875rem;
   display: flex;
   background-color: #fff; }
   .change_section .change_img {
@@ -481,7 +489,8 @@ abbr, acronym {
       color: #ffcc01;
       font-weight: 700;
       border: 3px solid #ffcc01;
-      text-align: center; }
+      text-align: center;
+      transition: .4s; }
       .change_section .change_content .change_btn:hover {
         background-color: #ffcc01;
         color: #ffffff; }
@@ -490,12 +499,6 @@ abbr, acronym {
   width: 100%;
   position: relative;
   overflow: hidden; }
-  .services h2 {
-    color: #ffcc01;
-    font-family: "Proxima Nova";
-    font-size: 3.75rem;
-    text-transform: uppercase;
-    margin-left: 24.375rem; }
   .services .services_slider {
     margin-top: 5.625rem;
     width: 100%;
@@ -508,8 +511,24 @@ abbr, acronym {
       .services .services_slider .services_slider_wrap .left_slide {
         position: relative;
         width: 70%;
-        height: auto;
-        border: 1px solid red; }
+        height: auto; }
+        .services .services_slider .services_slider_wrap .left_slide h3 {
+          margin-left: 6.5rem;
+          font-size: 114px;
+          text-transform: uppercase;
+          font-family: "Proxima Nova";
+          color: #ffcc01;
+          position: absolute;
+          opacity: 0.2;
+          top: -6.6875rem; }
+        .services .services_slider .services_slider_wrap .left_slide h2 {
+          color: #ffcc01;
+          font-family: "Proxima Nova";
+          font-size: 3.75rem;
+          text-transform: uppercase;
+          text-align: center;
+          position: relative;
+          top: -2.5rem; }
         .services .services_slider .services_slider_wrap .left_slide .left_line {
           position: absolute;
           width: 60%;
@@ -535,6 +554,21 @@ abbr, acronym {
         top: -8.4375rem;
         width: 30%;
         display: flex; }
+        .services .services_slider .services_slider_wrap .right_slide .all_services {
+          position: absolute;
+          bottom: 2%;
+          padding-top: 0.9375rem;
+          border: 3px solid #ffcc01;
+          width: 10.3125rem;
+          height: 3.75rem;
+          text-align: center;
+          transform: rotate(90deg);
+          text-transform: uppercase;
+          color: #1f1f1f;
+          font-family: "Proxima Nova";
+          font-size: 1rem;
+          font-weight: 700;
+          font-family: "Proxima Nova"; }
         .services .services_slider .services_slider_wrap .right_slide .right_slide_elem {
           position: absolute;
           flex: 1 1 22.1875rem;
@@ -547,5 +581,251 @@ abbr, acronym {
           .services .services_slider .services_slider_wrap .right_slide .right_slide_elem:nth-child(3) {
             z-index: 3;
             left: 15rem; }
+      .services .services_slider .services_slider_wrap .slider_btn {
+        border: none;
+        position: absolute;
+        width: 14.75rem;
+        height: 7.875rem;
+        background-color: rgba(255, 204, 1, 0.16);
+        color: #ffcc01;
+        transition: .4s;
+        cursor: pointer; }
+        .services .services_slider .services_slider_wrap .slider_btn:hover {
+          background-color: #ffcc01;
+          color: #ffffff; }
+        .services .services_slider .services_slider_wrap .slider_btn .icon-left-open, .services .services_slider .services_slider_wrap .slider_btn .icon-right-open {
+          font-size: 3.125rem;
+          position: relative; }
+      .services .services_slider .services_slider_wrap .left_services {
+        bottom: 20%;
+        left: 0; }
+      .services .services_slider .services_slider_wrap .right_services {
+        top: 25%;
+        right: 27%;
+        z-index: 6; }
+
+.schedule_section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 7.1875rem 0 3.125rem 0; }
+  .schedule_section h2 {
+    color: #ffcc01;
+    font-family: "Proxima Nova";
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center; }
+  .schedule_section .left_trainer {
+    max-width: 25rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0; }
+    .schedule_section .left_trainer img {
+      width: 100%;
+      height: 100%; }
+  .schedule_section .right_trainer {
+    max-width: 26.25rem;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0; }
+    .schedule_section .right_trainer img {
+      width: 100%;
+      height: 100%; }
+  .schedule_section .container {
+    margin-top: 10.625rem;
+    position: relative;
+    display: flex; }
+
+.schedule_trainers {
+  display: flex;
+  justify-content: space-between; }
+  .schedule_trainers .schedule_btn {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 3.75rem;
+    margin-right: 1.5625rem; }
+    .schedule_trainers .schedule_btn .btn_elem {
+      width: 10.25rem;
+      height: 3.75rem;
+      border: 0.1875rem solid #ffcc01;
+      color: #1f1f1f;
+      font-family: "Proxima Nova";
+      font-size: 1.0625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: 0.9375rem;
+      background-color: #ffffff;
+      transition: .4s; }
+      .schedule_trainers .schedule_btn .btn_elem:hover {
+        background-color: #ffcc01;
+        color: #ffffff; }
+      .schedule_trainers .schedule_btn .btn_elem:first-child {
+        margin-top: 0; }
+  .schedule_trainers .schedule {
+    display: flex; }
+    .schedule_trainers .schedule ul li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 7.5rem;
+      margin-left: 0.5rem;
+      margin-top: 0.5rem;
+      height: 3.125rem;
+      box-shadow: 0 0.0625rem 0.1875rem 0.0625rem rgba(255, 204, 1, 0.35);
+      background-color: #fefdf9;
+      font-size: 0.9375rem;
+      cursor: pointer; }
+      .schedule_trainers .schedule ul li:first-child {
+        font-size: 1.0625rem;
+        font-weight: 700;
+        background-color: #fff;
+        box-shadow: 0 0.0625rem 0.1875rem 0.0625rem white; }
+
+.news_section {
+  position: relative;
+  width: 100%;
+  margin-top: 7.5rem;
+  overflow: hidden; }
+  .news_section .parallax {
+    position: absolute; }
+  .news_section .news_content {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column; }
+    .news_section .news_content .news_line {
+      width: 70%;
+      height: 7.9375rem;
+      background-color: #fff;
+      position: absolute;
+      top: -0.625rem;
+      right: 0;
+      z-index: 6;
+      color: #ffcc01;
+      font-family: "Proxima Nova";
+      font-size: 3.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center; }
+      .news_section .news_content .news_line:nth-child(2) {
+        bottom: -0.375rem;
+        left: 0;
+        top: auto;
+        right: auto;
+        transform: rotate(180deg); }
+      .news_section .news_content .news_line::before {
+        content: "";
+        position: absolute;
+        left: -3.875rem;
+        display: block;
+        width: 0;
+        height: 0;
+        border-bottom: 7.9375rem solid #ffffff;
+        border-left: 3.9375rem solid transparent; }
+    .news_section .news_content .news_wrap {
+      padding: 17.5rem 0; }
+      .news_section .news_content .news_wrap .container {
+        padding: 0 0.3125rem;
+        position: relative;
+        z-index: 3;
+        display: flex;
+        justify-content: space-between;
+        align-self: center; }
+        .news_section .news_content .news_wrap .container .news {
+          display: flex;
+          flex-direction: column;
+          width: 50%; }
+          .news_section .news_content .news_wrap .container .news:nth-child(2) {
+            margin-top: 11.25rem; }
+          .news_section .news_content .news_wrap .container .news .news_elem {
+            display: flex;
+            width: 100%; }
+            .news_section .news_content .news_wrap .container .news .news_elem .elem_img {
+              max-width: 18.25rem;
+              width: 100%; }
+              .news_section .news_content .news_wrap .container .news .news_elem .elem_img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; }
+            .news_section .news_content .news_wrap .container .news .news_elem .news_text {
+              background-color: #fff;
+              max-width: 18.25rem;
+              width: 100%;
+              padding: 2.5rem 1.25rem 2.5rem 2.5rem; }
+              .news_section .news_content .news_wrap .container .news .news_elem .news_text .content_title {
+                color: #1f1f1f;
+                font-family: "Proxima Nova";
+                font-size: 1.0625rem;
+                font-weight: 700; }
+              .news_section .news_content .news_wrap .container .news .news_elem .news_text .content_date {
+                margin-top: 0.9375rem;
+                color: #1f1f1f;
+                font-family: "Proxima Nova";
+                font-size: 1.0625rem;
+                font-weight: 700; }
+              .news_section .news_content .news_wrap .container .news .news_elem .news_text .text_item {
+                text-indent: 1.25rem;
+                margin-top: 1.25rem;
+                color: #1f1f1f;
+                font-family: 'Lato';
+                font-size: 1.0625rem;
+                font-weight: 400;
+                line-height: 1.41; }
+              .news_section .news_content .news_wrap .container .news .news_elem .news_text .news_btn {
+                margin-top: 2.5rem;
+                text-align: center;
+                display: inline-block;
+                padding: 0.9375rem 1.875rem;
+                border: 0.1875rem solid #ffcc01;
+                color: #1f1f1f;
+                font-family: "Proxima Nova";
+                font-size: 1rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                transition: .4s; }
+                .news_section .news_content .news_wrap .container .news .news_elem .news_text .news_btn:hover {
+                  background-color: #ffcc01;
+                  color: #ffffff; }
+
+.club_cards_section {
+  width: 100%;
+  position: relative;
+  margin-top: 9.375rem; }
+  .club_cards_section h2 {
+    font-family: "Proxima Nova";
+    font-size: 3.75rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ffcc01;
+    text-transform: uppercase; }
+  .club_cards_section .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between; }
+    .club_cards_section .container .club_card {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 16.25rem;
+      margin-left: 1.875rem; }
+      .club_cards_section .container .club_card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+      .club_cards_section .container .club_card .card_text {
+        color: #1f1f1f;
+        font-family: 'Lato';
+        font-size: 1.0625rem;
+        font-weight: 400; }
+      .club_cards_section .container .club_card .card_price {
+        color: #1f1f1f;
+        font-family: "Proxima Nova";
+        font-size: 1.0625rem;
+        font-weight: 700; }
 
 /*# sourceMappingURL=main.css.map*/

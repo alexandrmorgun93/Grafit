@@ -8,7 +8,16 @@ function menuOpen(btn, menu) {
         menu.classList.add('active');
     });
 }
+
 menuOpen(btn, menu);
+
+/*BEGIN PARALLAX*/
+const Parallax = require('scroll-parallax');
+let p = new Parallax('.parallax', {
+    intensity: 30
+}).init();
+/*END PARALLAX*/
+
 // function menuCansel(menuClose) {
 //     menuClose.addEventListener('click', () => {
 //         this.classList.toggle('active');

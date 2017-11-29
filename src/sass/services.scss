@@ -2,13 +2,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-  h2 {
-    color: #ffcc01;
-    font-family: "Proxima Nova";
-    font-size: rem(60px);
-    text-transform: uppercase;
-    margin-left: rem(390px);
-  }
+
   .services_slider {
     margin-top: rem(90px);
     width: 100%;
@@ -23,7 +17,25 @@
         position: relative;
         width: 70%;
         height: auto;
-        border: 1px solid red;
+        h3 {
+          margin-left: rem(104px);
+          font-size: 114px;
+          text-transform: uppercase;
+          font-family: "Proxima Nova";
+          color: #ffcc01;
+          position: absolute;
+          opacity: 0.2;
+          top: rem(-107px);
+        }
+        h2 {
+          color: #ffcc01;
+          font-family: "Proxima Nova";
+          font-size: rem(60px);
+          text-transform: uppercase;
+          text-align: center;
+          position: relative;
+          top: rem(-40px);
+        }
         .left_line {
           position: absolute;
           width: 60%;
@@ -53,6 +65,22 @@
         top: rem(-135px);
         width: 30%;
         display: flex;
+        .all_services {
+          position: absolute;
+          bottom: 2%;
+          padding-top: rem(15px);
+          border: 3px solid #ffcc01;
+          width: rem(165px);
+          height: rem(60px);
+          text-align: center;
+          transform: rotate(90deg);
+          text-transform: uppercase;
+          color: #1f1f1f;
+          font-family: "Proxima Nova";
+          font-size: rem(16px);
+          font-weight: 700;
+          font-family: "Proxima Nova";
+        }
         .right_slide_elem {
           position: absolute;
           flex: 1 1 rem(355px);
@@ -70,6 +98,35 @@
           }
 
         }
+      }
+      .slider_btn {
+        border: none;
+        position: absolute;
+        width: rem(236px);
+        height: rem(126px);
+        background-color: rgba(255, 204, 1, .16);
+        color: #ffcc01;
+        transition: .4s;
+        cursor: pointer;
+        &:hover {
+          background-color: #ffcc01;
+          color: #ffffff;
+        }
+        .icon-left-open, .icon-right-open {
+          font-size: rem(50px);
+          position: relative;
+
+        }
+      }
+      .left_services {
+        bottom: 20%;
+        left: 0;
+      }
+      .right_services {
+        top: 25%;
+        right: 27%;
+        z-index: 6;
+
       }
     }
   }

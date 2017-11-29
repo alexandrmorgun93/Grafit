@@ -1,0 +1,130 @@
+.news_section {
+  position: relative;
+  width: 100%;
+  margin-top: rem(120px);
+  overflow: hidden;
+  .parallax {
+    position: absolute;
+  }
+  .news_content {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    .news_line {
+      width: 70%;
+      height: rem(127px);
+      background-color: #fff;
+      position: absolute;
+      top: rem(-10px);
+      right: 0;
+      z-index: 6;
+      color: #ffcc01;
+      font-family: "Proxima Nova";
+      font-size: rem(60px);
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      &:nth-child(2) {
+        bottom: rem(-6px);
+        left: 0;
+        top: auto;
+        right: auto;
+        transform: rotate(180deg);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: rem(-62px);
+        display: block;
+        width: 0;
+        height: 0;
+        border-bottom: rem(127px) solid #ffffff;
+        border-left: rem(63px) solid transparent;
+      }
+    }
+
+    .news_wrap {
+      padding: rem(280px) 0;
+      .container {
+        padding: 0 rem(5px);
+        position: relative;
+        z-index: 3;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        .news {
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+          &:nth-child(2) {
+            margin-top: rem(180px);
+          }
+          .news_elem {
+            display: flex;
+            width: 100%;
+            .elem_img {
+              max-width: rem(292px);
+              width: 100%;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+              }
+            }
+            .news_text {
+              background-color: #fff;
+              max-width: rem(292px);
+              width: 100%;
+              padding: rem(40px) rem(20px) rem(40px) rem(40px);
+              .content_title {
+                color: #1f1f1f;
+                font-family: "Proxima Nova";
+                font-size: rem(17px);
+                font-weight: 700;
+              }
+              .content_date {
+                margin-top: rem(15px);
+                color: #1f1f1f;
+                font-family: "Proxima Nova";
+                font-size: rem(17px);
+                font-weight: 700;
+              }
+              .text_item {
+                text-indent: rem(20px);
+                margin-top: rem(20px);
+                color: #1f1f1f;
+                font-family: 'Lato';
+                font-size: rem(17px);
+                font-weight: 400;
+                line-height: 1.41;
+              }
+              .news_btn {
+                margin-top: rem(40px);
+                text-align: center;
+                display: inline-block;
+                padding: rem(15px) rem(30px);
+                border: rem(3px) solid #ffcc01;
+                color: #1f1f1f;
+                font-family: "Proxima Nova";
+                font-size: rem(16px);
+                font-weight: 700;
+                text-transform: uppercase;
+                transition: .4s;
+                &:hover {
+                  background-color: #ffcc01;
+                  color: #ffffff;
+
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+}
