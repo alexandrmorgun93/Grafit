@@ -11,3 +11,22 @@ body {
   margin: 0 auto;
 
 }
+
+/*social*/
+.social {
+  display: flex;
+
+  a {
+    font-size: rem(30px);
+    color: #ffcc01;
+    opacity: 0.15;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.2);
+      transition: 0.3s;
+    }
+  }
+}
+/*---------------*/
