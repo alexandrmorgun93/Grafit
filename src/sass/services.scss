@@ -19,13 +19,13 @@
         height: auto;
         h3 {
           margin-left: rem(104px);
-          font-size: 114px;
-          text-transform: uppercase;
-          font-family: "Proxima Nova";
+          opacity: 0.12;
           color: #ffcc01;
-          position: absolute;
-          opacity: 0.2;
+          font-family: "Proxima Nova";
+          font-size: rem(126px);
+          line-height: 33px;
           top: rem(-107px);
+          text-transform: uppercase;
         }
         h2 {
           color: #ffcc01;
@@ -79,7 +79,11 @@
           font-family: "Proxima Nova";
           font-size: rem(16px);
           font-weight: 700;
-          font-family: "Proxima Nova";
+          transition: .4s;
+          &:hover {
+            background-color: #ffcc01;
+            color: #ffffff;
+          }
         }
         .right_slide_elem {
           position: absolute;

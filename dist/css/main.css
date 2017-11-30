@@ -131,7 +131,7 @@ abbr, acronym {
 .icon-instagram-1:before {
   content: '\F31E'; }
 
-.body {
+body {
   font-family: 'Proxima Nova';
   font-weight: 400;
   font-style: normal;
@@ -155,7 +155,8 @@ abbr, acronym {
   display: flex; }
   .main_head .container {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: space-between; }
     .main_head .container .adress {
       font-size: 1.5625rem;
       color: #ffcc01;
@@ -208,14 +209,12 @@ abbr, acronym {
   top: 0;
   z-index: 100;
   padding: 7.1875rem 0 5.9375rem;
-  background-color: #252424;
+  background-image: url("../../img/menu-fon.png");
   width: 100%;
   height: 100vh;
-  visibility: hidden;
-  opacity: 0; }
+  visibility: hidden; }
   .menu.active {
-    visibility: visible;
-    opacity: 1; }
+    visibility: visible; }
   .menu .container {
     position: relative;
     top: 0;
@@ -372,7 +371,6 @@ abbr, acronym {
         .slider_main .container .slider_text_wrap .slider_text .slider_title {
           text-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
           color: #ffcc01;
-          font-family: "Proxima Nova";
           font-size: 5rem;
           font-weight: 700;
           line-height: 100px;
@@ -514,13 +512,13 @@ abbr, acronym {
         height: auto; }
         .services .services_slider .services_slider_wrap .left_slide h3 {
           margin-left: 6.5rem;
-          font-size: 114px;
-          text-transform: uppercase;
-          font-family: "Proxima Nova";
+          opacity: 0.12;
           color: #ffcc01;
-          position: absolute;
-          opacity: 0.2;
-          top: -6.6875rem; }
+          font-family: "Proxima Nova";
+          font-size: 7.875rem;
+          line-height: 33px;
+          top: -6.6875rem;
+          text-transform: uppercase; }
         .services .services_slider .services_slider_wrap .left_slide h2 {
           color: #ffcc01;
           font-family: "Proxima Nova";
@@ -568,7 +566,10 @@ abbr, acronym {
           font-family: "Proxima Nova";
           font-size: 1rem;
           font-weight: 700;
-          font-family: "Proxima Nova"; }
+          transition: .4s; }
+          .services .services_slider .services_slider_wrap .right_slide .all_services:hover {
+            background-color: #ffcc01;
+            color: #ffffff; }
         .services .services_slider .services_slider_wrap .right_slide .right_slide_elem {
           position: absolute;
           flex: 1 1 22.1875rem;
@@ -609,13 +610,23 @@ abbr, acronym {
   position: relative;
   overflow: hidden;
   padding: 7.1875rem 0 3.125rem 0; }
+  .schedule_section h3 {
+    opacity: 0.12;
+    color: #ffcc01;
+    font-family: "Proxima Nova";
+    font-size: 7.875rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: 1.875rem; }
   .schedule_section h2 {
     color: #ffcc01;
     font-family: "Proxima Nova";
     text-transform: uppercase;
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 700;
-    text-align: center; }
+    text-align: center;
+    position: relative;
+    top: -4.375rem; }
   .schedule_section .left_trainer {
     max-width: 25rem;
     width: 100%;
@@ -635,7 +646,7 @@ abbr, acronym {
       width: 100%;
       height: 100%; }
   .schedule_section .container {
-    margin-top: 10.625rem;
+    margin-top: 6.25rem;
     position: relative;
     display: flex; }
 
@@ -696,7 +707,7 @@ abbr, acronym {
   .news_section .news_content {
     width: 100%;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     flex-direction: column; }
     .news_section .news_content .news_line {
@@ -712,7 +723,20 @@ abbr, acronym {
       font-size: 3.75rem;
       font-weight: 700;
       text-transform: uppercase;
-      text-align: center; }
+      display: flex;
+      align-items: flex-end;
+      justify-content: center; }
+      .news_section .news_content .news_line i {
+        font-style: normal;
+        opacity: 0.12;
+        color: #ffcc01;
+        font-family: "Proxima Nova";
+        font-size: 7.875rem;
+        font-weight: 700;
+        position: absolute;
+        text-transform: uppercase;
+        left: 0;
+        top: -1.0625rem; }
       .news_section .news_content .news_line:nth-child(2) {
         bottom: -0.375rem;
         left: 0;
@@ -797,35 +821,310 @@ abbr, acronym {
   width: 100%;
   position: relative;
   margin-top: 9.375rem; }
-  .club_cards_section h2 {
+  .club_cards_section .club_card_title {
+    opacity: 0.12;
+    color: #ffcc01;
+    font-family: "Proxima Nova";
+    font-size: 7.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center; }
+  .club_cards_section .card_title_item {
     font-family: "Proxima Nova";
     font-size: 3.75rem;
     font-weight: 700;
     text-align: center;
     color: #ffcc01;
-    text-transform: uppercase; }
-  .club_cards_section .container {
+    text-transform: uppercase;
     position: relative;
-    display: flex;
-    justify-content: space-between; }
-    .club_cards_section .container .club_card {
+    top: -4.375rem; }
+  .club_cards_section .container {
+    position: relative; }
+    .club_cards_section .container .club_wrap {
+      width: 100%;
+      margin-top: 5.3125rem;
       display: flex;
-      flex-direction: column;
-      flex: 1 1 16.25rem;
-      margin-left: 1.875rem; }
-      .club_cards_section .container .club_card img {
+      position: relative; }
+      .club_cards_section .container .club_wrap .club_card {
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        height: 100%;
-        object-fit: cover; }
-      .club_cards_section .container .club_card .card_text {
-        color: #1f1f1f;
-        font-family: 'Lato';
-        font-size: 1.0625rem;
-        font-weight: 400; }
-      .club_cards_section .container .club_card .card_price {
+        max-width: 16.25rem;
+        margin-left: 1.875rem; }
+        .club_cards_section .container .club_wrap .club_card:first-child {
+          margin-left: 0; }
+        .club_cards_section .container .club_wrap .club_card .card_text {
+          color: #1f1f1f;
+          font-family: 'Lato';
+          font-size: 1.0625rem;
+          font-weight: 400; }
+        .club_cards_section .container .club_wrap .club_card .card_price {
+          color: #1f1f1f;
+          font-family: "Proxima Nova";
+          font-size: 1.0625rem;
+          font-weight: 700; }
+      .club_cards_section .container .club_wrap .club_btn {
+        position: absolute;
+        top: 3.9375rem;
+        right: -9.0625rem;
+        transform: rotate(90deg);
+        padding: 1.25rem 2.5rem;
+        border: 3px solid #ffcc01;
         color: #1f1f1f;
         font-family: "Proxima Nova";
-        font-size: 1.0625rem;
-        font-weight: 700; }
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: .4s; }
+        .club_cards_section .container .club_wrap .club_btn:hover {
+          background-color: #ffcc01;
+          color: #ffffff; }
+
+/*CARDS SECTION*/
+.cards_section {
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .cards_section::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 6, 6, 0.85);
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .cards_section .parallax {
+    position: absolute; }
+  .cards_section .club_card_title {
+    position: absolute;
+    z-index: 2; }
+  .cards_section .card_title {
+    position: relative;
+    z-index: 2;
+    left: -9.375rem;
+    text-align: center;
+    margin-top: 226px;
+    color: #ffcc01;
+    font-family: "Proxima Nova";
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase; }
+    .cards_section .card_title span {
+      font-size: 7.875rem;
+      opacity: 0.05;
+      position: absolute;
+      top: -4rem;
+      left: 13.5rem; }
+  .cards_section .container {
+    margin-top: 7.5rem;
+    max-width: 78.9375rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+    z-index: 2; }
+    .cards_section .container .club_wrap {
+      background-color: #fff;
+      padding: 5rem 3.75rem 0;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      .cards_section .container .club_wrap .club_card {
+        margin-bottom: 3.125rem;
+        flex: 1 1 16.4375rem; }
+      .cards_section .container .club_wrap .club_control {
+        width: 100%;
+        height: 100px;
+        background: transparent; }
+
+.articles {
+  position: relative;
+  width: 100%;
+  margin-top: 11.25rem;
+  overflow: hidden; }
+  .articles .parallax {
+    position: absolute; }
+  .articles .articles_content {
+    width: 100%;
+    position: relative;
+    z-index: 1; }
+    .articles .articles_content .articles_line {
+      padding-left: 6.25rem;
+      width: 70%;
+      height: 7.9375rem;
+      background-color: #fff;
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: #ffcc01;
+      font-family: "Proxima Nova";
+      font-size: 3.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: flex;
+      align-items: flex-end; }
+      .articles .articles_content .articles_line i {
+        font-style: normal;
+        opacity: 0.12;
+        color: #ffcc01;
+        font-family: "Proxima Nova";
+        font-size: 7.875rem;
+        font-weight: 700;
+        position: absolute;
+        left: 43px;
+        top: -29px;
+        z-index: 1; }
+      .articles .articles_content .articles_line::before {
+        content: "";
+        position: absolute;
+        left: -3.875rem;
+        display: block;
+        width: 0;
+        height: 0;
+        border-bottom: 7.9375rem solid #ffffff;
+        border-left: 3.9375rem solid transparent; }
+    .articles .articles_content .article_wrap {
+      padding: 18rem 0 10rem 0;
+      width: 100%;
+      position: relative; }
+      .articles .articles_content .article_wrap .container {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        z-index: 2; }
+        .articles .articles_content .article_wrap .container .article_elem {
+          max-width: 18.25rem;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          z-index: 3; }
+          .articles .articles_content .article_wrap .container .article_elem:nth-child(2) {
+            margin-top: 8.125rem; }
+          .articles .articles_content .article_wrap .container .article_elem:last-child {
+            margin-top: 5rem; }
+          .articles .articles_content .article_wrap .container .article_elem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
+          .articles .articles_content .article_wrap .container .article_elem .article_text {
+            padding: 2.8125rem 2.5rem;
+            text-align: center;
+            box-shadow: 0 1px 32px rgba(20, 12, 8, 0.49);
+            border: 1px solid #f4f4f4;
+            background-color: #fcfcfc; }
+            .articles .articles_content .article_wrap .container .article_elem .article_text h2 {
+              color: #1f1f1f;
+              font-family: "Proxima Nova";
+              font-size: 1.0625rem;
+              font-weight: 700;
+              text-transform: uppercase; }
+            .articles .articles_content .article_wrap .container .article_elem .article_text p {
+              margin-top: 1.5625rem;
+              color: #1f1f1f;
+              font-family: 'Lato';
+              font-size: 1.0625rem;
+              font-weight: 400;
+              line-height: 1.41; }
+            .articles .articles_content .article_wrap .container .article_elem .article_text a {
+              margin-top: 1.875rem;
+              border: 3px solid #ffcc01;
+              color: #1f1f1f;
+              font-family: "Proxima Nova";
+              font-size: 1rem;
+              font-weight: 700;
+              padding: 0.9375rem 1.875rem;
+              display: inline-block;
+              transition: .4s; }
+              .articles .articles_content .article_wrap .container .article_elem .article_text a:hover {
+                background-color: #ffcc01;
+                color: #ffffff; }
+
+.main_footer {
+  width: 100%;
+  border-top: 3.125rem solid #000000;
+  position: relative; }
+  .main_footer .footer_content {
+    width: 100%;
+    position: relative;
+    background-color: #1f1f1f;
+    padding: 7.75rem 0 9.5625rem; }
+    .main_footer .footer_content .container {
+      display: flex;
+      justify-content: space-between; }
+      .main_footer .footer_content .container .footer_text {
+        max-width: 24.0625rem;
+        width: 100%;
+        color: #ffffff; }
+        .main_footer .footer_content .container .footer_text h2 {
+          font-family: "Proxima Nova";
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: #ffffff; }
+        .main_footer .footer_content .container .footer_text p {
+          margin-top: 2.5rem;
+          font-family: 'Lato';
+          font-size: 1.125rem;
+          font-weight: 400;
+          line-height: 1.5; }
+        .main_footer .footer_content .container .footer_text a {
+          display: block;
+          margin-top: 2.5rem;
+          font-family: "Proxima Nova";
+          font-size: 1.875rem;
+          font-weight: 700; }
+      .main_footer .footer_content .container .feedback {
+        max-width: 28.5rem;
+        width: 100%;
+        position: relative; }
+        .main_footer .footer_content .container .feedback input {
+          width: 100%;
+          height: 4.375rem;
+          background-color: #000000;
+          color: #ffffff;
+          border: none;
+          margin-top: 1.875rem;
+          font-family: 'Lato';
+          font-size: 1.25rem;
+          font-weight: 400;
+          text-align: center;
+          transition: .4s; }
+          .main_footer .footer_content .container .feedback input:focus {
+            background-color: #161616; }
+          .main_footer .footer_content .container .feedback input:first-child {
+            margin-top: 0; }
+        .main_footer .footer_content .container .feedback button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 1.875rem;
+          background-color: transparent;
+          width: 100%;
+          height: 4.375rem;
+          color: #ffcc01;
+          font-family: "Proxima Nova";
+          font-size: 1.25rem;
+          font-weight: 700;
+          border: 3px solid #ffcc01;
+          text-transform: uppercase;
+          transition: .4s; }
+          .main_footer .footer_content .container .feedback button:hover {
+            background-color: #ffcc01;
+            color: #ffffff; }
+  .main_footer .copywriter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+    color: #ffffff;
+    font-family: "Myriad Pro";
+    font-size: 1.25rem;
+    font-weight: 400;
+    background-color: #000000; }
+    .main_footer .copywriter span {
+      margin-right: 0.625rem; }
 
 /*# sourceMappingURL=main.css.map*/
