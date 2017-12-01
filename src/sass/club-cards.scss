@@ -3,25 +3,12 @@
   position: relative;
   margin-top: rem(150px);
 
-  .club_card_title {
-    opacity: 0.12;
-    color: #ffcc01;
-    font-family: "Proxima Nova";
-    font-size: rem(126px);
-    font-weight: 700;
-    text-transform: uppercase;
+  .main_title {
     text-align: center;
-  }
-
-  .card_title_item {
-    font-family: "Proxima Nova";
-    font-size: rem(60px);
-    font-weight: 700;
-    text-align: center;
-    color: #ffcc01;
-    text-transform: uppercase;
-    position: relative;
-    top: rem(-70px);
+    span {
+      left: 17%;
+      top: -91%;;
+    }
   }
   .container {
     position: relative;
@@ -41,13 +28,13 @@
         }
         .card_text {
           color: #1f1f1f;
-          font-family: Lato;
+          font-family: "Lato";
           font-size: rem(17px);
           font-weight: 400;
         }
         .card_price {
           color: #1f1f1f;
-          font-family: "Proxima Nova";
+
           font-size: rem(17px);
           font-weight: 700;
         }
@@ -58,15 +45,14 @@
         right: rem(-145px);
         transform: rotate(90deg);
         padding: rem(20px) rem(40px);
-        border: 3px solid #ffcc01;
+        border: 3px solid $yellow-color;
         color: #1f1f1f;
-        font-family: "Proxima Nova";
         font-size: rem(16px);
         font-weight: 700;
         text-transform: uppercase;
         transition: .4s;
         &:hover {
-          background-color: #ffcc01;
+          background-color: $yellow-color;
           color: #ffffff;
         }
       }
@@ -75,31 +61,14 @@
 }
 
 /*CARDS SECTION*/
-.cards_section {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  &::before {
-    @include before_fig(100%, 100%, rgba(6, 6, 6, 0.85));
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  .parallax {
-    position: absolute;
-  }
-  .club_card_title {
-    position: absolute;
-    z-index: 2;
-  }
-  .card_title {
+.main_section {
+  .main_title {
     position: relative;
     z-index: 2;
     left: rem(-150px);
     text-align: center;
     margin-top: 226px;
-    color: #ffcc01;
-    font-family: "Proxima Nova";
+    color: $yellow-color;
     font-size: 60px;
     font-weight: 700;
     text-transform: uppercase;
@@ -151,7 +120,7 @@
       }
       .icon-left-open, .icon-right-open {
         font-size: rem(25px);
-        color: #ffcc01;
+        color: $yellow-color;
 
       }
       .control_elem {
@@ -163,13 +132,13 @@
         display: block;
         &.active {
           &::before {
-            @include before_fig(rem(17px), rem(3px), #ffcc01);
+            @include before_fig(rem(17px), rem(3px), $yellow-color);
             bottom: -24%;
             left: -41%;
           }
-            &:first-child{
-              margin-left:0;
-            }
+          &:first-child {
+            margin-left: 0;
+          }
 
         }
 
@@ -182,28 +151,9 @@
       display: flex;
       justify-content: space-between;
       padding: 0 rem(80px);
-      .left_nav {
-        a {
-          color: #989898;
-          font-size: rem(14px);
-          font-weight: 700;
-          margin-left: rem(40px);
-          text-transform: uppercase;
-          transition: .4s;
-          position: relative;
-          &:hover {
-            color: #ffcc01;
-          }
-          &:first-child {
-            margin-left: 0;
-            &::before {
-              @include before_fig(rem(4px), rem(4px), #ffcc01);
-              right: -37%;
-              top: 45%;
-            }
-          }
-        }
-      }
+
     }
   }
 }
+
+

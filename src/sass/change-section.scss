@@ -1,7 +1,7 @@
 .change_section {
   width: 100%;
   position: relative;
-  padding-top:rem(115px);
+  padding-top: rem(115px);
   display: flex;
   background-color: #fff;
   .change_img {
@@ -27,7 +27,7 @@
     &:nth-child(3) {
       position: absolute;
       right: 0;
-      top:rem(178px);
+      top: rem(178px);
       z-index: 3;
       max-width: rem(450px);
       width: 100%;
@@ -41,36 +41,22 @@
     margin-left: rem(150px);
     position: relative;
     z-index: 2;
-    .title{
-      text-transform: uppercase;
-      font-family: "Proxima Nova";
-      position: absolute;
-      z-index: 1;
-      left:rem(70px);
-      top:rem(-47px);
-      font-size: rem(115px);
-      opacity: 0.2;
-      color: #ffcc01;
-      font-weight: 700;
-    }
-    .change_title {
-      max-width: rem(270px);
-      text-transform: uppercase;
-      font-family: 'Proxima Nova';
-      color: #ffcc01;
-      font-size: rem(60px);
-      font-weight: 700;
+    .main_title {
+      span {
+        position: absolute;
+        left: rem(53px);
+        top: rem(-75px);
+      }
     }
     .title_item {
       margin-top: rem(-10px);
       color: #1f1f1f;
       font-size: rem(21px);
-      font-family: 'Proxima Nova';
       font-weight: 400;
 
     }
     .text_wrap {
-      margin-top:rem(60px);
+      margin-top: rem(60px);
       .change_text {
         max-width: rem(447px);
         width: 100%;
@@ -79,26 +65,26 @@
         font-size: rem(17px);
         font-weight: 300;
         line-height: 24px;
-          &:nth-child(2){
-            margin-top:rem(30px);
-          }
+        &:nth-child(2) {
+          margin-top: rem(30px);
+        }
       }
     }
-    .change_btn{
+    .change_btn {
       display: block;
       margin-top: rem(40px);
-      padding: rem(20px)rem(142px);
+      padding: rem(20px) rem(142px);
       text-transform: uppercase;
       font-size: rem(16px);
-      color: #ffcc01;
-      font-weight:700;
-      border: 3px solid #ffcc01;
+      color: $yellow-color;
+      font-weight: 700;
+      border: 3px solid $yellow-color;
       text-align: center;
       transition: .4s;
-        &:hover{
-          background-color:#ffcc01 ;
-          color: #ffffff;
-        }
+      &:hover {
+        background-color: $yellow-color;
+        color: #ffffff;
+      }
     }
   }
 }

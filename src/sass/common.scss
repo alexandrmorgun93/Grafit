@@ -4,11 +4,27 @@ body {
   font-style: normal;
   font-size: rem(18px);
 }
-
+/*main section*/
+.main_section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    @include before_fig(100%, 100%, rgba(6, 6, 6, 0.85));
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .parallax{
+    position: absolute;
+  }
+}
+/*-----------------*/
 .container {
   max-width: rem(1170px);
   width: 100%;
   margin: 0 auto;
+  position: relative;
 
 }
 
@@ -29,4 +45,117 @@ body {
     }
   }
 }
+
 /*---------------*/
+.main_title {
+  position: relative;
+  color: #ffcc01;
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 100%;
+  span {
+    font-size: rem(126px);
+    opacity: 0.2;
+    position: absolute;
+  }
+}
+
+.main_line {
+  width: 70%;
+  height: rem(127px);
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  z-index: 6;
+  display: flex;
+  align-items: flex-end;
+
+  &:nth-child(2) {
+    bottom: rem(-6px);
+    left: 0;
+    top: auto;
+    right: auto;
+    transform: rotate(180deg);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: rem(-62px);
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: rem(127px) solid #ffffff;
+    border-left: rem(63px) solid transparent;
+  }
+}
+
+/*main nav*/
+.main_nav {
+  a {
+    color: #989898;
+    font-size: rem(14px);
+    font-weight: 700;
+    margin-left: rem(40px);
+    text-transform: uppercase;
+    transition: .4s;
+    position: relative;
+    &:hover {
+      color: $yellow-color;
+    }
+    &:first-child {
+      margin-left: 0;
+      &::before {
+        @include before_fig(rem(4px), rem(4px), $yellow-color);
+        right: -37%;
+        top: 45%;
+      }
+    }
+  }
+}
+/*slider btn*/
+
+  .slider_btn {
+    border: none;
+    position: absolute;
+    width: rem(236px);
+    height: rem(126px);
+    background-color: rgba(255, 204, 1, .16);
+    color: $yellow-color;
+    transition: .4s;
+    cursor: pointer;
+    &:hover {
+      background-color: $yellow-color;
+      color: #ffffff;
+    }
+    .icon-left-open, .icon-right-open {
+      font-size: rem(50px);
+      position: relative;
+
+    }
+  }
+  .left_services {
+    bottom: 20%;
+    left: 0;
+  }
+  .right_services {
+    top: 25%;
+    right: 27%;
+    z-index: 6;
+
+  }
+.trainers_section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: rem(100px);
+  &::before {
+    @include before_fig(100%, 100%, rgba(6, 6, 6, 0.92));
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .parallax {
+    position: absolute;
+  }
+}

@@ -21,50 +21,12 @@
     //  position: absolute;
     //
     //}
-    .news_line {
-      width: 70%;
-      height: rem(127px);
-      background-color: #fff;
-      position: absolute;
-      top: rem(-10px);
-      right: 0;
-      z-index: 6;
-      color: #ffcc01;
-      font-family: "Proxima Nova";
-      font-size: rem(60px);
-      font-weight: 700;
-      text-transform: uppercase;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      i {
-        font-style: normal;
-        opacity: 0.12;
-        color: #ffcc01;
-        font-family: "Proxima Nova";
-        font-size: rem(126px);
-        font-weight: 700;
-        position: absolute;
-        text-transform: uppercase;
-        left: 0;
-        top:rem(-17px);
-      }
-      &:nth-child(2) {
-        bottom: rem(-6px);
-        left: 0;
-        top: auto;
-        right: auto;
-        transform: rotate(180deg);
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        left: rem(-62px);
-        display: block;
-        width: 0;
-        height: 0;
-        border-bottom: rem(127px) solid #ffffff;
-        border-left: rem(63px) solid transparent;
+    .main_line {
+      .main_title {
+        span {
+          left: rem(53px);
+          top: rem(-80px);
+        }
       }
     }
 
@@ -104,14 +66,12 @@
               padding: rem(40px) rem(20px) rem(40px) rem(40px);
               .content_title {
                 color: #1f1f1f;
-                font-family: "Proxima Nova";
                 font-size: rem(17px);
                 font-weight: 700;
               }
               .content_date {
                 margin-top: rem(15px);
                 color: #1f1f1f;
-                font-family: "Proxima Nova";
                 font-size: rem(17px);
                 font-weight: 700;
               }
@@ -129,15 +89,14 @@
                 text-align: center;
                 display: inline-block;
                 padding: rem(15px) rem(30px);
-                border: rem(3px) solid #ffcc01;
+                border: rem(3px) solid $yellow-color;
                 color: #1f1f1f;
-                font-family: "Proxima Nova";
                 font-size: rem(16px);
                 font-weight: 700;
                 text-transform: uppercase;
                 transition: .4s;
                 &:hover {
-                  background-color: #ffcc01;
+                  background-color: $yellow-color;
                   color: #ffffff;
 
                 }

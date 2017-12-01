@@ -15,7 +15,6 @@
         width: 100%;
         color: #ffffff;
         h2 {
-          font-family: "Proxima Nova";
           font-size: rem(40px);
           font-weight: 700;
           color: #ffffff;
@@ -30,7 +29,6 @@
         a {
           display: block;
           margin-top: rem(40px);
-          font-family: "Proxima Nova";
           font-size: rem(30px);
           font-weight: 700;
         }
@@ -67,15 +65,14 @@
           background-color: transparent;
           width: 100%;
           height: rem(70px);
-          color: #ffcc01;
-          font-family: "Proxima Nova";
+          color: $yellow-color;
           font-size: rem(20px);
           font-weight: 700;
-          border: 3px solid #ffcc01;
+          border: 3px solid $yellow-color;
           text-transform: uppercase;
           transition: .4s;
           &:hover {
-            background-color: #ffcc01;
+            background-color: $yellow-color;
             color: #ffffff;
           }
         }

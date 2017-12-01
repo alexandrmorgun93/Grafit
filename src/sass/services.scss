@@ -17,25 +17,14 @@
         position: relative;
         width: 70%;
         height: auto;
-        h3 {
-          margin-left: rem(104px);
-          opacity: 0.12;
-          color: #ffcc01;
-          font-family: "Proxima Nova";
-          font-size: rem(126px);
-          line-height: 33px;
-          top: rem(-107px);
-          text-transform: uppercase;
-        }
-        h2 {
-          color: #ffcc01;
-          font-family: "Proxima Nova";
-          font-size: rem(60px);
-          text-transform: uppercase;
+        .main_title {
           text-align: center;
-          position: relative;
-          top: rem(-40px);
+          span {
+            left: rem(100px);
+            top: rem(-91px);
+          }
         }
+
         .left_line {
           position: absolute;
           width: 60%;
@@ -69,19 +58,18 @@
           position: absolute;
           bottom: 2%;
           padding-top: rem(15px);
-          border: 3px solid #ffcc01;
+          border: 3px solid $yellow-color;
           width: rem(165px);
           height: rem(60px);
           text-align: center;
           transform: rotate(90deg);
           text-transform: uppercase;
           color: #1f1f1f;
-          font-family: "Proxima Nova";
           font-size: rem(16px);
           font-weight: 700;
           transition: .4s;
           &:hover {
-            background-color: #ffcc01;
+            background-color: $yellow-color;
             color: #ffffff;
           }
         }
@@ -100,37 +88,7 @@
             z-index: 3;
             left: rem(240px)
           }
-
         }
-      }
-      .slider_btn {
-        border: none;
-        position: absolute;
-        width: rem(236px);
-        height: rem(126px);
-        background-color: rgba(255, 204, 1, .16);
-        color: #ffcc01;
-        transition: .4s;
-        cursor: pointer;
-        &:hover {
-          background-color: #ffcc01;
-          color: #ffffff;
-        }
-        .icon-left-open, .icon-right-open {
-          font-size: rem(50px);
-          position: relative;
-
-        }
-      }
-      .left_services {
-        bottom: 20%;
-        left: 0;
-      }
-      .right_services {
-        top: 25%;
-        right: 27%;
-        z-index: 6;
-
       }
     }
   }

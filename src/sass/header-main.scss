@@ -16,7 +16,7 @@
 
     .adress {
       font-size: rem(25px);
-      color: #ffcc01;
+      color: $yellow-color;
       margin-left: rem(65px);
     }
 
@@ -46,7 +46,7 @@
   .btn1 {
     width: rem(32px);
     height: 4px;
-    background-color: #ffcc01;
+    background-color: $yellow-color;
     margin: rem(3px) 0;
     -webkit-transition: 0.4s;
     transition: 0.4s;
@@ -55,7 +55,7 @@
   .btn2 {
     width: rem(32px);
     height: 4px;
-    background-color: #ffcc01;
+    background-color: $yellow-color;
     margin: rem(3px) 0;
     -webkit-transition: 0.4s;
     transition: 0.4s;
@@ -64,7 +64,7 @@
   .btn3 {
     width: rem(32px);
     height: 4px;
-    background-color: #ffcc01;
+    background-color:$yellow-color;
     margin: rem(3px) 0;
     -webkit-transition: 0.4s;
     transition: 0.4s;
@@ -119,7 +119,7 @@
         position: relative;
         width: 53px;
         height: 52px;
-        border: 3px solid #ffcc01;
+        border: 3px solid $yellow-color;
         padding-top: rem(5px);
         display: block;
         color: #ffffff;
@@ -162,7 +162,7 @@
           }
 
           &::before {
-            @include before_fig(rem(4px), rem(4px), #ffcc01);
+            @include before_fig(rem(4px), rem(4px), $yellow-color);
             top: rem(15px);
             left: rem(-10px);
           }
@@ -175,7 +175,7 @@
             transition: 0.2s;
 
             &:hover {
-              color: #ffcc01;
+              color: $yellow-color;
             }
           }
 
@@ -206,7 +206,7 @@
                   color: inherit;
 
                   &::before {
-                    @include before_fig(100%, rem(1px), #ffcc01);
+                    @include before_fig(100%, rem(1px), $yellow-color);
                     bottom: 0;
                     // animation-name: borderLine;
                     // animation-duration: 1.5s;
