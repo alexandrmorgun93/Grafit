@@ -63,15 +63,9 @@
 /*CARDS SECTION*/
 .main_section {
   .main_title {
-    position: relative;
     z-index: 2;
-    left: rem(-150px);
     text-align: center;
-    margin-top: 226px;
-    color: $yellow-color;
-    font-size: 60px;
-    font-weight: 700;
-    text-transform: uppercase;
+    margin-top: rem(226px);
 
     span {
       font-size: rem(126px);
@@ -113,7 +107,7 @@
       align-items: center;
       padding-right: rem(65px);
       &::before {
-        @include before_fig(100%, 100%, rgba(255, 255, 255, 0.1));
+        @include before_fig(100%, 100%, rgba(255, 255, 255, 0.02));
         top: 0;
         left: 0;
         z-index: -1;
@@ -136,14 +130,15 @@
             bottom: -24%;
             left: -41%;
           }
-          &:first-child {
-            margin-left: 0;
-          }
-
         }
-
+        &:hover {
+          &::before {
+            @include before_fig(rem(17px), rem(3px), $yellow-color);
+            bottom: -24%;
+            left: -41%;
+          }
+        }
       }
-
     }
     .club_footer {
       margin-top: rem(60px);

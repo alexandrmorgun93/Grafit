@@ -69,10 +69,10 @@
       margin-top: rem(180px);
       .main_nav {
         a {
-          &:nth-child(2) {
+          &:nth-child(3) {
             &::before {
               @include before_fig(rem(4px), rem(4px), $yellow-color);
-              right: -37%;
+              left: rem(-23px);
               top: 45%;
             }
           }
