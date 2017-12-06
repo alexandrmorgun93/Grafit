@@ -93,6 +93,7 @@ const Parallax = __webpack_require__(2);
 let p = new Parallax('.parallax', {
     intensity: 30
 }).init();
+
 /*END PARALLAX*/
 
 // function menuCansel(menuClose) {

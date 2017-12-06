@@ -39,22 +39,12 @@
           font-weight: 700;
         }
       }
-      .club_btn {
+      .btn {
         position: absolute;
         top: rem(63px);
         right: rem(-145px);
         transform: rotate(90deg);
-        padding: rem(20px) rem(40px);
-        border: 3px solid $yellow-color;
-        color: #1f1f1f;
-        font-size: rem(16px);
-        font-weight: 700;
-        text-transform: uppercase;
-        transition: .4s;
-        &:hover {
-          background-color: $yellow-color;
-          color: #ffffff;
-        }
+        width: rem(236px);
       }
     }
   }

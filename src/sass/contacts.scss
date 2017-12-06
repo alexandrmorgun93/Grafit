@@ -1,0 +1,48 @@
+.main_section {
+  .container {
+    display: flex;
+    justify-content: center;
+    .main_title {
+      text-align: left;
+      span {
+        top: -81px;
+        left: -106px;
+      }
+    }
+    h3 {
+      color: #ffffff;
+      font-size: rem(20px);
+      text-transform: uppercase;
+      margin: rem(35px) 0 rem(60px);
+    }
+    .content_contacts {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      color: #ffffff;
+      font-size: rem(20px);
+      font-weight: 700;
+      line-height: 1.7;
+      .contacts_title {
+        margin-bottom: rem(10px);
+      }
+      .sofia_contacts {
+        max-width: rem(412px);
+        width: 100%;
+      }
+      .vihnevoe_contacts {
+        max-width: rem(450px);
+        width: 100%;
+      }
+    }
+  }
+}
+
+/*map*/
+
+#map {
+  z-index: 3;
+  width: 100%;
+  height: rem(630px);
+}

@@ -4,7 +4,6 @@
   }
   .container {
     margin-top: rem(140px);
-    padding-bottom: rem(100px);
     .gym_content {
       position: relative;
       background-color: #fff;
@@ -23,25 +22,6 @@
           &:nth-child(2) {
             margin-top: rem(30px);
           }
-        }
-        a {
-          border: rem(3px) solid $yellow-color;
-          font-size: rem(16px);
-          font-weight: 700;
-          text-transform: uppercase;
-          max-width: rem(390px);
-          width: 100%;
-          height: rem(60px);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-top: rem(35px);
-          transition: .4s;
-          &:hover {
-            background-color: $yellow-color;
-            color: #ffffff;
-          }
-
         }
       }
 
@@ -62,22 +42,6 @@
         }
       }
 
-    }
-    .gym_footer {
-      display: flex;
-      justify-content: space-between;
-      margin-top: rem(180px);
-      .main_nav {
-        a {
-          &:nth-child(3) {
-            &::before {
-              @include before_fig(rem(4px), rem(4px), $yellow-color);
-              left: rem(-23px);
-              top: 45%;
-            }
-          }
-        }
-      }
     }
   }
 }

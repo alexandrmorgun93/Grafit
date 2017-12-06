@@ -16,6 +16,7 @@ const Parallax = require('scroll-parallax');
 let p = new Parallax('.parallax', {
     intensity: 30
 }).init();
+
 /*END PARALLAX*/
 
 // function menuCansel(menuClose) {

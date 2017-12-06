@@ -52,21 +52,9 @@
     position: relative;
     top: rem(60px);
     margin-right: rem(25px);
-    .btn_elem {
+    .btn {
       width: rem(164px);
-      height: rem(60px);
-      border: rem(3px) solid $yellow-color;
-      color: #1f1f1f;
-      font-size: rem(17px);
-      font-weight: 700;
-      text-transform: uppercase;
       margin-top: rem(15px);
-      background-color: #ffffff;
-      transition: .4s;
-      &:hover {
-        background-color: $yellow-color;
-        color: #ffffff;
-      }
       &:first-child {
         margin-top: 0;
       }
@@ -94,6 +82,31 @@
           font-weight: 700;
           background-color: #fff;
           box-shadow: 0 rem(1px) rem(3px) rem(1px) rgb(255, 255, 255);
+        }
+      }
+    }
+  }
+}
+
+/*schedule main*/
+.main_section {
+  .container {
+    .schedule_wrap {
+      position: relative;
+      width: 100%;
+      margin-bottom: rem(100px);
+      .schedule_trainers {
+        display: flex;
+        justify-content: space-around;
+        .schedule_btn {
+          top: rem(10px);
+          .btn{
+            background-color: transparent;
+            color: #ffffff;
+            &:hover {
+              color: #1f1f1f;
+            }
+          }
         }
       }
     }

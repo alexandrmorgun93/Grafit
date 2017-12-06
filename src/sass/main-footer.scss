@@ -58,29 +58,18 @@
           }
 
         }
-        button {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        .btn {
           margin-top: rem(30px);
-          background-color: transparent;
+          background-color: #1f1f1f;
           width: 100%;
-          height: rem(70px);
-          color: $yellow-color;
-          font-size: rem(20px);
-          font-weight: 700;
-          border: 3px solid $yellow-color;
-          text-transform: uppercase;
-          transition: .4s;
-          &:hover {
-            background-color: $yellow-color;
-            color: #ffffff;
-          }
+            &:hover{
+              background-color: $yellow-color;
+            }
         }
       }
     }
   }
-  .copywriter{
+  .copywriter {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,8 +80,8 @@
     font-size: rem(20px);
     font-weight: 400;
     background-color: #000000;
-      span{
-        margin-right:rem(10px);
-      }
+    span {
+      margin-right: rem(10px);
+    }
   }
 }

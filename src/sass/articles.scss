@@ -1,3 +1,4 @@
+/*main article*/
 .articles {
   position: relative;
   width: 100%;
@@ -69,19 +70,9 @@
               font-weight: 400;
               line-height: 1.41;
             }
-            a {
+            .btn {
               margin-top: rem(30px);
-              border: 3px solid $yellow-color;
-              color: #1f1f1f;
-              font-size: rem(16px);
-              font-weight: 700;
-              padding: rem(15px) rem(30px);
-              display: inline-block;
-              transition: .4s;
-              &:hover {
-                background-color:$yellow-color;
-                color: #ffffff;
-              }
+              width: rem(165px);
             }
           }
         }
@@ -89,3 +80,93 @@
     }
   }
 }
+
+/*article*/
+.main_section {
+  .container_news {
+    .article_block_elem {
+      margin-top: rem(200px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .article_item {
+        max-width: rem(964px);
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        height: rem(276px);
+        position: absolute;
+        padding: rem(60px) rem(70px) rem(50px) 0;
+        h4 {
+          align-self: flex-end;
+          max-width: rem(550px);
+          width: 100%;
+          font-size: rem(32px);
+          line-height: 1.35;
+          color: #171717;
+          text-transform: uppercase;
+        }
+        .article_date {
+          max-width: rem(800px);
+          width: 100%;
+          height: rem(50px);
+          background-color: #060606;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #ffffff;
+          margin-top: rem(40px);
+          i {
+            margin-right: rem(15px);
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
+////ARTICLE 2PIC SECTION
+//.main_section {
+//  .article_block {
+//    .container {
+//      .article_container_item {
+//        position: relative;
+//        width: 100%;
+//        display: flex;
+//        .first_img {
+//          position: relative;
+//          height: rem(710px);
+//          z-index: 1;
+//          left: 0;
+//          img {
+//            position: absolute;
+//            width: 100%;
+//            height: 100%;
+//            object-fit: cover;
+//          }
+//        }
+//        .second_img {
+//          position: relative;
+//          z-index: 2;
+//          right: 0;
+//          height: rem(710px);
+//          img {
+//            position: absolute;
+//            width: 100%;
+//            height: 100%;
+//            object-fit: cover;
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
