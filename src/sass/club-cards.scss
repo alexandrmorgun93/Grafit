@@ -2,7 +2,6 @@
   width: 100%;
   position: relative;
   margin-top: rem(150px);
-
   .main_title {
     text-align: center;
     span {
@@ -16,16 +15,15 @@
       width: 100%;
       margin-top: rem(85px);
       display: flex;
+      justify-content: space-around;
       position: relative;
+      flex-wrap: wrap;
       .club_card {
         display: flex;
         flex-direction: column;
-        width: 100%;
         max-width: rem(260px);
-        margin-left: rem(30px);
-        &:first-child {
-          margin-left: 0;
-        }
+        width: 100%;
+
         .card_text {
           color: #1f1f1f;
           font-family: "Lato";
@@ -105,15 +103,16 @@
       .icon-left-open, .icon-right-open {
         font-size: rem(25px);
         color: $yellow-color;
+        background-color: transparent;
+        border: none;
 
       }
-      .control_elem {
+      a {
         position: relative;
         color: #fffcf1;
         font-size: rem(17px);
-        font-weight: 700;
         margin-left: rem(25px);
-        display: block;
+        display: inline-flex;
         &.active {
           &::before {
             @include before_fig(rem(17px), rem(3px), $yellow-color);

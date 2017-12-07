@@ -62,9 +62,11 @@
           margin-top: rem(30px);
           background-color: #1f1f1f;
           width: 100%;
-            &:hover{
-              background-color: $yellow-color;
-            }
+          color: $yellow-color;
+          &:hover {
+            background-color: $yellow-color;
+            color: #1f1f1f;
+          }
         }
       }
     }

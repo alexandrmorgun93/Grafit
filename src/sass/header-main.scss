@@ -43,31 +43,11 @@
   left: 0;
   cursor: pointer;
 
-  .btn1 {
+  li {
     width: rem(32px);
     height: 4px;
     background-color: $yellow-color;
     margin: rem(3px) 0;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-  }
-
-  .btn2 {
-    width: rem(32px);
-    height: 4px;
-    background-color: $yellow-color;
-    margin: rem(3px) 0;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-  }
-
-  .btn3 {
-    width: rem(32px);
-    height: 4px;
-    background-color:$yellow-color;
-    margin: rem(3px) 0;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
   }
 }
 
@@ -79,8 +59,8 @@
   top: 0;
   z-index: 100;
   padding: rem(115px) 0 rem(95px);
-  background-color: #252424;
-  //background-image: url_css('img/menu-fon.png');
+  background: url_css('img/menu-bg.png')no-repeat;
+  background-size: cover;
   width: 100%;
   height: 100vh;
   visibility: hidden;
@@ -208,8 +188,6 @@
                   &::before {
                     @include before_fig(100%, rem(1px), $yellow-color);
                     bottom: 0;
-                    // animation-name: borderLine;
-                    // animation-duration: 1.5s;
                   }
                 }
               }
@@ -239,12 +217,3 @@
     }
   }
 }
-
-// @keyframes borderLine{
-//   0%{
-//   left:-100%;
-//   }
-//   100%{
-//   left:0;
-//   }
-// }

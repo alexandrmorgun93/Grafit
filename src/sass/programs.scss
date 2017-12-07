@@ -63,20 +63,10 @@
           .programs_btn {
             display: flex;
             justify-content: space-between;
-            a {
+            .btn {
               margin-top: rem(25px);
               width: rem(149px);
               height: rem(50px);
-              border: rem(3px) solid $yellow-color;
-              font-size: rem(16px);
-              color: #1f1f1f;
-              display: inline-flex;
-              justify-content: center;
-              align-items: center;
-              &:hover {
-                background-color: $yellow-color;
-                color: #ffffff;
-              }
             }
           }
 

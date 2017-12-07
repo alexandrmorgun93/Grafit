@@ -1,0 +1,138 @@
+@media screen and (max-width: 1700px) {
+  //NEWS
+  .news_section {
+    .news_content {
+      .main_line {
+        .main_title {
+          span {
+            top: rem(-45px);
+            font-size: rem(85px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1540px) {
+  //CHANGE SECTION
+  .change_section {
+    .change_img {
+      opacity: .2;
+      &:nth-child(3) {
+        opacity: .2;
+      }
+    }
+    .change_right {
+      .change_content {
+        background-color: transparent;
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  //CHANGE SECTION
+  .change_section {
+    .change_img {
+      &:nth-child(2) {
+        max-width: 40%;
+        bottom: -9%;
+        left: 32%;
+      }
+    }
+  }
+  //CLUB CURDS SECTION
+  .club_cards_section {
+    .main_title {
+      span {
+        font-size: rem(80px);
+      }
+    }
+    .container {
+      .club_wrap {
+        .btn {
+          margin-top: 0;
+          top: auto;
+          right: auto;
+          bottom: -30%;
+          left: 50%;
+          transform: translate(-50%);
+        }
+        .club_card {
+          flex: 1 1 40%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  //NEWS
+  .news_section {
+    .news_content {
+      .news_wrap {
+        .container {
+          flex-direction: column;
+          .news {
+            width: 100%;
+            &:nth-child(2) {
+              margin-top: 0;
+            }
+            .news_elem {
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  //CLUB CURDS
+  .club_cards_section {
+    .container {
+      .club_wrap {
+        .btn {
+          bottom: -17%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .club_cards_section {
+    .main_title {
+      font-size: rem(45px);
+      span {
+        font-size: rem(60px);
+      }
+    }
+    .container {
+      .club_wrap {
+        .club_card {
+          flex: 1 1 100%;
+        }
+        .btn {
+          bottom: -17%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 518px) {
+  .club_cards_section {
+    .container {
+      .club_wrap {
+        .btn {
+          bottom: -7%;
+        }
+      }
+    }
+  }
+}

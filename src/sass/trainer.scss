@@ -39,20 +39,7 @@
         }
         a {
           margin-top: rem(30px);
-          display: inline-flex;
-          justify-content: center;
-          align-items: center;
           width: 100%;
-          height: rem(60px);
-          border: rem(3px) solid #ffcc01;
-          background-color: transparent;
-          font-size: rem(16px);
-          color: #ffffff;
-          text-transform: uppercase;
-          transition: .4s;
-          &:hover {
-            background-color: $yellow-color;
-          }
         }
       }
       .trainer_info {
@@ -114,6 +101,11 @@
         width: 100%;
         height: rem(347px);
       }
+    }
+  }
+  .footer_container {
+    .container {
+      margin-top: 0;
     }
   }
 }
