@@ -82,10 +82,22 @@
 }
 
 /*article*/
-.main_section {
+.article_section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    @include before_fig(100%, 100%, rgba(6, 6, 6, 0.85));
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .parallax {
+    position: absolute;
+  }
   .container_news {
     .article_block_elem {
-      margin-top: rem(200px);
+      margin-top: rem(215px);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -130,6 +142,9 @@
 
       }
 
+    }
+    .gym_footer {
+      padding: 0 rem(150px);
     }
   }
 }

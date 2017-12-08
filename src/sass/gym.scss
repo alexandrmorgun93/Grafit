@@ -1,9 +1,28 @@
-.main_section {
+.gym_section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    @include before_fig(100%, 100%, rgba(6, 6, 6, 0.85));
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
   .parallax {
     position: absolute;
   }
+  .main_title {
+    margin-top: rem(180px);
+    text-align: center;
+    z-index: 3;
+    span {
+      left: 2%;
+      top: -82%;
+    }
+  }
   .container {
     margin-top: rem(140px);
+    z-index: 3;
     .gym_content {
       position: relative;
       background-color: #fff;
@@ -42,6 +61,9 @@
         }
       }
 
+    }
+    .gym_footer{
+      margin-top: rem(175px);
     }
   }
 }

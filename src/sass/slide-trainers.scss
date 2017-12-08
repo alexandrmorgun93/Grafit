@@ -33,12 +33,35 @@
 }
 
 /*trainers*/
-.main_section {
+.trainers_main {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  &::before {
+    @include before_fig(100%, 100%, rgba(6, 6, 6, 0.92));
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .parallax {
+    position: absolute;
+  }
+  .main_title {
+    margin-top: rem(200px);
+    text-align: center;
+    z-index: 3;
+    span {
+      left: 8%;
+      top: -94%;
+    }
+  }
   .container {
-    .trainers_content {
-      position: relative;
+    margin-top: rem(140px);
+    position: relative;
+    z-index: 3;
+    .content_trainer {
       width: 100%;
-      z-index: 3;
+      margin-top: rem(100px);
       display: flex;
       flex-wrap: wrap;
       .trainers_elem {

@@ -6,7 +6,7 @@
     text-align: center;
     span {
       left: 17%;
-      top: -91%;;
+      top: -91%;
     }
   }
   .container {
@@ -49,7 +49,19 @@
 }
 
 /*CARDS SECTION*/
-.main_section {
+.clubs_card {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    @include before_fig(100%, 100%, rgba(6, 6, 6, 0.85));
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .parallax {
+    position: absolute;
+  }
   .main_title {
     z-index: 2;
     text-align: center;
@@ -63,16 +75,15 @@
       left: rem(216px);
     }
   }
-  .club_wrap {
+  .container {
+    max-width: rem(1263px);
     margin-top: rem(120px);
     width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-bottom: rem(50px);
-    z-index: 2;
-    .container {
-      max-width: rem(1263px);
+    z-index: 3;
+    .club_wrap {
       background-color: #fff;
       padding: rem(80px) rem(60px) 0;
       width: 100%;

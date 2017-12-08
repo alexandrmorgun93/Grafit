@@ -116,7 +116,7 @@ body {
 .gym_footer {
   display: flex;
   justify-content: space-between;
-  margin: rem(100px) 0 rem(60px);
+  margin: rem(60px) 0 rem(60px);
   .main_nav {
     a {
       color: #989898;
@@ -187,7 +187,6 @@ body {
   position: relative;
   width: 100%;
   overflow: hidden;
-  margin-bottom: rem(100px);
   &::before {
     @include before_fig(100%, 100%, rgba(6, 6, 6, 0.92));
     top: 0;

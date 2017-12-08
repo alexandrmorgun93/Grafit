@@ -1,8 +1,24 @@
-.main_section {
+.contacts_section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    @include before_fig(100%, 100%, rgba(6, 6, 6, 0.85));
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .parallax {
+    position: absolute;
+  }
+
   .container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    z-index: 3;
     .main_title {
+      margin-top: rem(200px);
       text-align: left;
       span {
         top: -81px;
@@ -42,6 +58,7 @@
 /*map*/
 
 #map {
+  margin-top: rem(50px);
   z-index: 3;
   width: 100%;
   height: rem(630px);

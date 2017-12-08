@@ -1,6 +1,29 @@
-.main_section {
+.programs_section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    @include before_fig(100%, 100%, rgba(6, 6, 6, 0.85));
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .parallax {
+    position: absolute;
+  }
+  .main_title {
+    text-align: center;
+    z-index: 3;
+    margin-top: rem(180px);
+    span {
+      left: 10%;
+      top: -93%;
+    }
+  }
   .container {
+    z-index: 3;
     .programs_content {
+      margin-top: rem(90px);
       position: relative;
       width: 100%;
       display: flex;
