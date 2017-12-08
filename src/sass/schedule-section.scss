@@ -40,12 +40,14 @@
     margin-top: rem(100px);
     position: relative;
     display: flex;
+    z-index: 3;
   }
 }
 
 .schedule_trainers {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   .schedule_btn {
     display: flex;
     flex-direction: column;
@@ -61,17 +63,21 @@
     }
   }
   .schedule {
+    width: 100%;
     display: flex;
     ul {
-
+      margin-left: 8px;
+      flex: 1 1 rem(120px);
+      max-width: 100%;
+      &:first-child {
+        margin-left: 0;
+      }
       li {
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center;
-        width: rem(120px);
-        margin-left: rem(8px);
         margin-top: rem(8px);
+        text-align: center;
         height: rem(50px);
         box-shadow: 0 rem(1px) rem(3px) rem(1px) rgba(255, 204, 1, 0.35);
         background-color: #fefdf9;
@@ -81,7 +87,8 @@
           font-size: rem(17px);
           font-weight: 700;
           background-color: #fff;
-          box-shadow: 0 rem(1px) rem(3px) rem(1px) rgb(255, 255, 255);
+          box-shadow:none;
+          text-transform: uppercase;
         }
       }
     }
