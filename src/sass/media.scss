@@ -33,6 +33,30 @@
 }
 
 @media screen and (max-width: 1280px) {
+  //HEADER
+  .main_head {
+    .container {
+      padding: 0 rem(15px);
+      .head_elem {
+        display: flex;
+        flex-direction: column;
+        a {
+          &:first-child {
+            margin-bottom: rem(10px);
+          }
+        }
+      }
+    }
+  }
+  //TRAINERS MAIN INFO
+  .trainers_main {
+    .container {
+      .content_trainer {
+        padding: 0 rem(15px);
+        justify-content: space-around;
+      }
+    }
+  }
   //CHANGE SECTION
   .change_section {
     .change_img {
@@ -51,6 +75,7 @@
       }
     }
     .container {
+      max-width: none;
       .club_wrap {
         .btn {
           margin-top: 0;
@@ -67,11 +92,35 @@
       }
     }
   }
+  //SERVICES SECTION
+  .services_section {
+    .container {
+      .services_content {
+        padding: 0 rem(15px);
+        justify-content: space-around;
+        .services_elem {
+          margin-right: 0;
+
+        }
+      }
+    }
+
+  }
+  //CONTACTS
+  .contacts_section {
+    .container {
+      .main_title {
+        span {
+
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1200px) {
   //SHEDULE SECTION
-  .schedule_section {
+  .schedule_section, .schedule_main{
     .main_title {
       font-size: rem(40px);
       span {
@@ -127,16 +176,16 @@
     }
   }
   //CLUB CARDS
-  .main_section {
+  .clubs_card {
     .main_title {
       span {
         font-size: rem(80px);
       }
     }
-    .club_wrap {
+    .container {
       margin-top: auto;
       padding: 0 20px;
-      .container {
+      .club_wrap {
         text-align: center;
         padding: rem(40px) rem(20px) 0;
       }
@@ -205,11 +254,24 @@
       }
     }
   }
+  .main_head {
+    .logo {
+      display: none;
+    }
+  }
 }
 
 @media screen and (max-width: 850px) {
+  //SERVICES SECTION
+  .services_section {
+    .main_title {
+      span {
+        display: none;
+      }
+    }
+  }
   //SChEDULE SECTION
-  .schedule_section {
+  .schedule_section, .schedule_main{
     .main_title {
       span {
         display: none;
@@ -240,7 +302,7 @@
     .main_title {
       font-size: rem(45px);
       span {
-        font-size: rem(60px);
+        display: none;
       }
     }
     .container {
@@ -251,6 +313,14 @@
         .btn {
           bottom: -17%;
         }
+      }
+    }
+  }
+  //CLUB CARD
+  .clubs_card {
+    .main_title {
+      span {
+        display: none;
       }
     }
   }
@@ -315,11 +385,38 @@
       margin-bottom: rem(30px);
     }
   }
+  //CONTACTS
+  .contacts_section {
+    .container {
+      .main_title {
+        span {
+          display: none;
+        }
+      }
+      .content_contacts {
+        flex-wrap: wrap;
+        .sofia_contacts {
+          margin-bottom: rem(30px);
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 650px) {
+  //HEADER
+  .main_head {
+    .container {
+      .adress {
+        font-size: rem(16px);
+        span {
+          font-size: rem(15px);
+        }
+      }
+    }
+  }
   //SChEDULE SECTION
-  .schedule_section {
+  .schedule_section, .schedule_main {
     .main_title {
       font-size: rem(30px);
     }
@@ -353,7 +450,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  //CHANGE SECTION
   //CHANGE SECTION
   .change_section {
     min-height: auto;
@@ -421,6 +517,17 @@
       }
     }
   }
+  //TRAINERS MAIN INFO
+  .trainers_main {
+    .main_title {
+      font-size: rem(40px);
+      span {
+        display: none;
+      }
+    }
+
+  }
+
 }
 
 @media screen and (max-width: 518px) {

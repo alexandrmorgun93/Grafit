@@ -1,15 +1,49 @@
-/*
-.trainers_section {
-  margin-bottom: 0;
+.gallery_section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    @include before_fig(100%, 100%, rgba(6, 6, 6, 0.85));
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .parallax {
+    position: absolute;
+  }
   .main_title {
+    z-index: 3;
     text-align: center;
+    margin-top: rem(180px);
     span {
-      opacity: 0.12;
-      left: 29%;
-      top: -100%;
+      left: 27%;
+      top: -97%;
     }
   }
   .container {
-    z-index: 1;
+    z-index: 3;
+    .photo_wrap {
+      margin-top: rem(100px);
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: rem(60px);
+      .photo_elem {
+        flex: 1 1 20%;
+        height: rem(208px);
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          &:hover {
+            transform: scale(1.8);
+            transition: .4s;
+          }
+        }
+      }
+    }
+    .gym_footer {
+      margin-top: 0;
+    }
   }
-}*/
+}

@@ -387,21 +387,6 @@ body {
       width: 10.3125rem;
       margin-top: 2.5rem; }
 
-.photo_wrap {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap; }
-  .photo_wrap .photo_elem {
-    flex: 1 1 20%;
-    height: 13rem; }
-    .photo_wrap .photo_elem img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
-      .photo_wrap .photo_elem img:hover {
-        transform: scale(1.8);
-        transition: .4s; }
-
 /*Header*/
 .main_head {
   width: 100%;
@@ -803,17 +788,19 @@ body {
       flex-wrap: wrap;
       margin-top: 6.25rem; }
       .services_section .container .services_content .services_elem {
-        margin-left: 2.1875rem;
+        margin-right: 2.1875rem;
         margin-bottom: 2.1875rem;
         position: relative;
         display: flex;
-        max-width: 22.1875rem;
+        max-width: 22.5rem;
         width: 100%;
+        height: 15rem;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         overflow: hidden;
         cursor: pointer; }
+        .services_section .container .services_content .services_elem:nth-child(3n+3) {
+          margin-right: 0; }
         .services_section .container .services_content .services_elem::before {
           content: "";
           display: block;
@@ -842,7 +829,7 @@ body {
         .services_section .container .services_content .services_elem:hover::after {
           opacity: 0.52;
           right: -50%; }
-        .services_section .container .services_content .services_elem:hover a {
+        .services_section .container .services_content .services_elem:hover .btn {
           visibility: visible;
           margin-top: 3.75rem;
           opacity: 1; }
@@ -854,6 +841,7 @@ body {
           object-fit: cover;
           filter: grayscale(100%); }
         .services_section .container .services_content .services_elem .elem_item {
+          width: 100%;
           position: absolute;
           z-index: 2; }
         .services_section .container .services_content .services_elem h3 {
@@ -862,25 +850,13 @@ body {
           font-size: 1.375rem;
           color: #fefefe;
           text-align: center; }
-        .services_section .container .services_content .services_elem a {
+        .services_section .container .services_content .services_elem .btn {
           width: 9.3125rem;
           height: 3.125rem;
           margin-left: 1.25rem;
-          display: inline-flex;
-          justify-content: center;
-          align-items: center;
-          border: 0.1875rem solid #ffffff;
-          font-size: 1rem;
-          color: #ffffff;
-          transition: .4s;
-          visibility: hidden;
-          position: relative;
           opacity: 0; }
-          .services_section .container .services_content .services_elem a:first-child {
+          .services_section .container .services_content .services_elem .btn:first-child {
             margin-left: 0; }
-          .services_section .container .services_content .services_elem a:hover {
-            border: 0.1875rem solid #ffcc01;
-            color: #ffcc01; }
 
 .schedule_section {
   width: 100%;
@@ -937,9 +913,13 @@ body {
     .schedule_trainers .schedule ul {
       margin-left: 8px;
       flex: 1 1 7.5rem;
-      max-width: 100%; }
+      max-width: 100%;
+      text-align: center; }
       .schedule_trainers .schedule ul:first-child {
         margin-left: 0; }
+      .schedule_trainers .schedule ul .schedule_day {
+        font-size: 1.0625rem;
+        text-transform: uppercase; }
       .schedule_trainers .schedule ul li {
         display: flex;
         justify-content: center;
@@ -951,29 +931,49 @@ body {
         background-color: #fefdf9;
         font-size: 0.9375rem;
         cursor: pointer; }
-        .schedule_trainers .schedule ul li:first-child {
-          font-size: 1.0625rem;
-          font-weight: 700;
-          background-color: #fff;
-          box-shadow: none;
-          text-transform: uppercase; }
 
 /*schedule main*/
-.main_section .container .schedule_wrap {
-  position: relative;
+.schedule_main {
   width: 100%;
-  margin-bottom: 6.25rem; }
-  .main_section .container .schedule_wrap .schedule_trainers {
-    display: flex;
-    justify-content: space-around; }
-    .main_section .container .schedule_wrap .schedule_trainers .schedule_btn {
-      top: 0.625rem; }
-      .main_section .container .schedule_wrap .schedule_trainers .schedule_btn .btn {
-        background-color: transparent;
-        color: #ffffff; }
-        .main_section .container .schedule_wrap .schedule_trainers .schedule_btn .btn:hover {
-          color: #1f1f1f;
-          background-color: #ffcc01; }
+  position: relative;
+  overflow: hidden; }
+  .schedule_main::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 6, 6, 0.85);
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .schedule_main .parallax {
+    position: absolute; }
+  .schedule_main .main_title {
+    z-index: 3;
+    text-align: center;
+    margin-top: 11.25rem;
+    margin-bottom: 6.25rem; }
+    .schedule_main .main_title span {
+      left: 12%;
+      top: -100%; }
+  .schedule_main .container {
+    z-index: 3; }
+    .schedule_main .container .schedule_wrap {
+      position: relative;
+      width: 100%;
+      margin-bottom: 6.25rem; }
+      .schedule_main .container .schedule_wrap .schedule_trainers {
+        display: flex;
+        justify-content: space-around; }
+        .schedule_main .container .schedule_wrap .schedule_trainers .schedule_btn {
+          top: 0.625rem; }
+          .schedule_main .container .schedule_wrap .schedule_trainers .schedule_btn .btn {
+            background-color: transparent;
+            color: #ffffff; }
+            .schedule_main .container .schedule_wrap .schedule_trainers .schedule_btn .btn:hover {
+              color: #1f1f1f;
+              background-color: #ffcc01; }
 
 .news_section {
   position: relative;
@@ -1054,21 +1054,50 @@ body {
     left: 50%;
     transform: translate(-50%); }
 
-/*
-.trainers_section {
-  margin-bottom: 0;
-  .main_title {
+.gallery_section {
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .gallery_section::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 6, 6, 0.85);
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .gallery_section .parallax {
+    position: absolute; }
+  .gallery_section .main_title {
+    z-index: 3;
     text-align: center;
-    span {
-      opacity: 0.12;
-      left: 29%;
-      top: -100%;
-    }
-  }
-  .container {
-    z-index: 1;
-  }
-}*/
+    margin-top: 11.25rem; }
+    .gallery_section .main_title span {
+      left: 27%;
+      top: -97%; }
+  .gallery_section .container {
+    z-index: 3; }
+    .gallery_section .container .photo_wrap {
+      margin-top: 6.25rem;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 3.75rem; }
+      .gallery_section .container .photo_wrap .photo_elem {
+        flex: 1 1 20%;
+        height: 13rem; }
+        .gallery_section .container .photo_wrap .photo_elem img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+          .gallery_section .container .photo_wrap .photo_elem img:hover {
+            transform: scale(1.8);
+            transition: .4s; }
+    .gallery_section .container .gym_footer {
+      margin-top: 0; }
+
 .club_cards_section {
   width: 100%;
   position: relative;
@@ -1748,7 +1777,8 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    z-index: 3; }
+    z-index: 3;
+    padding: 0 0.9375rem; }
     .contacts_section .container .main_title {
       margin-top: 12.5rem;
       text-align: left; }
@@ -1785,96 +1815,116 @@ body {
   width: 100%;
   height: 39.375rem; }
 
-.main_section .container {
-  position: relative; }
-  .main_section .container .content_trainer {
+.trainer_info_section {
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .trainer_info_section::before {
+    content: "";
+    display: block;
+    position: absolute;
     width: 100%;
-    margin-top: 6.25rem;
-    display: flex; }
-    .main_section .container .content_trainer .trainer {
-      max-width: 28.5625rem;
+    height: 100%;
+    background-color: rgba(6, 6, 6, 0.85);
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .trainer_info_section .parallax {
+    position: absolute; }
+  .trainer_info_section .container {
+    z-index: 3;
+    position: relative;
+    max-width: 78.75rem;
+    display: flex;
+    flex-direction: column; }
+    .trainer_info_section .container .content_trainer {
       width: 100%;
-      position: relative; }
-      .main_section .container .content_trainer .trainer .photo_trainer {
+      margin-top: 12.5rem;
+      display: flex; }
+      .trainer_info_section .container .content_trainer .trainer {
+        max-width: 28.5625rem;
         width: 100%;
-        overflow: hidden;
-        height: 35.5625rem; }
-        .main_section .container .content_trainer .trainer .photo_trainer img {
+        position: relative; }
+        .trainer_info_section .container .content_trainer .trainer .photo_trainer {
           width: 100%;
-          height: 100%;
-          object-fit: cover; }
-      .main_section .container .content_trainer .trainer .trainer_name {
-        text-align: right;
+          overflow: hidden;
+          height: 35.5625rem; }
+          .trainer_info_section .container .content_trainer .trainer .photo_trainer img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
+        .trainer_info_section .container .content_trainer .trainer .trainer_name {
+          text-align: right;
+          width: 100%;
+          margin-bottom: 2.5rem; }
+          .trainer_info_section .container .content_trainer .trainer .trainer_name h2 {
+            font-size: 2rem;
+            color: #ffcc01;
+            text-transform: uppercase; }
+          .trainer_info_section .container .content_trainer .trainer .trainer_name p {
+            margin-top: 1.25rem;
+            color: #ffffff;
+            font-family: 'Lato';
+            font-size: 1.25rem;
+            font-weight: 400; }
+        .trainer_info_section .container .content_trainer .trainer a {
+          margin-top: 1.875rem;
+          width: 100%; }
+      .trainer_info_section .container .content_trainer .trainer_info {
+        position: relative;
+        margin-top: 11.5625rem;
+        max-width: 43.75rem;
+        height: 23.125rem;
         width: 100%;
-        margin-bottom: 2.5rem; }
-        .main_section .container .content_trainer .trainer .trainer_name h2 {
-          font-size: 2rem;
-          color: #ffcc01;
-          text-transform: uppercase; }
-        .main_section .container .content_trainer .trainer .trainer_name p {
-          margin-top: 1.25rem;
+        background-color: #fff;
+        padding: 3.4375rem 4.375rem 3.75rem 2.1875rem; }
+        .trainer_info_section .container .content_trainer .trainer_info div {
+          height: 8.4375rem; }
+          .trainer_info_section .container .content_trainer .trainer_info div .info_title {
+            margin-bottom: 0.9375rem;
+            color: #1f1f1f;
+            font-family: 'Lato';
+            font-size: 1.25rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            border-bottom: 0.1875rem solid #ffcc01; }
+          .trainer_info_section .container .content_trainer .trainer_info div .info_title_item1 {
+            color: #1f1f1f;
+            font-family: 'Lato';
+            font-size: 1.25rem;
+            font-weight: 400; }
+          .trainer_info_section .container .content_trainer .trainer_info div .info_title_item2 {
+            text-indent: 1.25rem;
+            color: #1f1f1f;
+            font-family: 'Lato';
+            font-size: 1.0625rem;
+            font-weight: 400;
+            line-height: 1.41; }
+    .trainer_info_section .container .video_trainer {
+      max-width: 42.9375rem;
+      width: 100%;
+      align-self: flex-end;
+      margin-top: -7.5rem; }
+      .trainer_info_section .container .video_trainer .video_head {
+        max-width: 36.5625rem;
+        width: 100%;
+        border-bottom: 0.1875rem solid #ffcc01;
+        margin-bottom: 1.25rem; }
+        .trainer_info_section .container .video_trainer .video_head h5 {
           color: #ffffff;
           font-family: 'Lato';
           font-size: 1.25rem;
-          font-weight: 400; }
-      .main_section .container .content_trainer .trainer a {
-        margin-top: 1.875rem;
-        width: 100%; }
-    .main_section .container .content_trainer .trainer_info {
-      position: relative;
-      margin-top: 11.5625rem;
-      max-width: 43.75rem;
-      height: 23.125rem;
-      width: 100%;
-      background-color: #fff;
-      padding: 3.4375rem 4.375rem 3.75rem 2.1875rem; }
-      .main_section .container .content_trainer .trainer_info div {
-        height: 8.4375rem; }
-        .main_section .container .content_trainer .trainer_info div .info_title {
-          margin-bottom: 0.9375rem;
-          color: #1f1f1f;
-          font-family: 'Lato';
-          font-size: 1.25rem;
           font-weight: 400;
-          text-transform: uppercase;
-          border-bottom: 0.1875rem solid #ffcc01; }
-        .main_section .container .content_trainer .trainer_info div .info_title_item1 {
-          color: #1f1f1f;
-          font-family: 'Lato';
-          font-size: 1.25rem;
-          font-weight: 400; }
-        .main_section .container .content_trainer .trainer_info div .info_title_item2 {
-          text-indent: 1.25rem;
-          color: #1f1f1f;
-          font-family: 'Lato';
-          font-size: 1.0625rem;
-          font-weight: 400;
-          line-height: 1.41; }
-  .main_section .container .video_trainer {
-    max-width: 42.9375rem;
-    width: 100%;
-    align-self: flex-end;
-    margin-top: -7.5rem; }
-    .main_section .container .video_trainer .video_head {
-      max-width: 36.5625rem;
-      width: 100%;
-      border-bottom: 0.1875rem solid #ffcc01;
-      margin-bottom: 1.25rem; }
-      .main_section .container .video_trainer .video_head h5 {
-        color: #ffffff;
-        font-family: 'Lato';
-        font-size: 1.25rem;
-        font-weight: 400;
-        text-transform: uppercase; }
-    .main_section .container .video_trainer .video_wrap {
-      width: 100%;
-      height: 21.6875rem; }
-
-.main_section .footer_container .container {
-  margin-top: 0; }
+          text-transform: uppercase; }
+      .trainer_info_section .container .video_trainer .video_wrap {
+        width: 100%;
+        height: 21.6875rem; }
+  .trainer_info_section .footer_container .container {
+    margin-top: 0; }
 
 /*slide trainer*/
 .trainer_slide {
+  margin-top: 6.25rem;
   width: 100%;
   position: relative;
   z-index: 2;
@@ -2007,48 +2057,65 @@ body {
     background-color: transparent; } }
 
 @media screen and (max-width: 1280px) {
+  .main_head .container {
+    padding: 0 0.9375rem; }
+    .main_head .container .head_elem {
+      display: flex;
+      flex-direction: column; }
+      .main_head .container .head_elem a:first-child {
+        margin-bottom: 0.625rem; }
+  .trainers_main .container .content_trainer {
+    padding: 0 0.9375rem;
+    justify-content: space-around; }
   .change_section .change_img:nth-child(2) {
     max-width: 40%;
     bottom: -9%;
     left: 32%; }
   .club_cards_section .main_title span {
     font-size: 5rem; }
-  .club_cards_section .container .club_wrap .btn {
-    margin-top: 0;
-    top: auto;
-    right: auto;
-    bottom: -30%;
-    left: 50%;
-    transform: translate(-50%); }
-  .club_cards_section .container .club_wrap .club_card {
-    flex: 1 1 40%;
-    text-align: center; } }
+  .club_cards_section .container {
+    max-width: none; }
+    .club_cards_section .container .club_wrap .btn {
+      margin-top: 0;
+      top: auto;
+      right: auto;
+      bottom: -30%;
+      left: 50%;
+      transform: translate(-50%); }
+    .club_cards_section .container .club_wrap .club_card {
+      flex: 1 1 40%;
+      text-align: center; }
+  .services_section .container .services_content {
+    padding: 0 0.9375rem;
+    justify-content: space-around; }
+    .services_section .container .services_content .services_elem {
+      margin-right: 0; } }
 
 @media screen and (max-width: 1200px) {
-  .schedule_section .main_title {
+  .schedule_section .main_title, .schedule_main .main_title {
     font-size: 2.5rem; }
-    .schedule_section .main_title span {
+    .schedule_section .main_title span, .schedule_main .main_title span {
       font-size: 3.75rem;
       left: 24%;
       top: -69%; }
-  .schedule_section .left_trainer {
+  .schedule_section .left_trainer, .schedule_main .left_trainer {
     display: none; }
-  .schedule_section .right_trainer {
+  .schedule_section .right_trainer, .schedule_main .right_trainer {
     top: 20%;
     opacity: .2; }
-  .schedule_section .container {
+  .schedule_section .container, .schedule_main .container {
     margin-top: auto;
     padding: 0 3.125rem; }
-    .schedule_section .container .schedule_trainers {
+    .schedule_section .container .schedule_trainers, .schedule_main .container .schedule_trainers {
       flex-direction: column; }
-      .schedule_section .container .schedule_trainers .schedule_btn {
+      .schedule_section .container .schedule_trainers .schedule_btn, .schedule_main .container .schedule_trainers .schedule_btn {
         flex-direction: row;
         justify-content: center;
         margin-bottom: 5rem; }
-        .schedule_section .container .schedule_trainers .schedule_btn .btn {
+        .schedule_section .container .schedule_trainers .schedule_btn .btn, .schedule_main .container .schedule_trainers .schedule_btn .btn {
           margin-left: 1.875rem;
           margin-top: auto; }
-          .schedule_section .container .schedule_trainers .schedule_btn .btn:first-child {
+          .schedule_section .container .schedule_trainers .schedule_btn .btn:first-child, .schedule_main .container .schedule_trainers .schedule_btn .btn:first-child {
             margin-left: 0; }
   .news_section .news_content .news_wrap .container {
     flex-direction: column; }
@@ -2058,12 +2125,12 @@ body {
         margin-top: 0; }
       .news_section .news_content .news_wrap .container .news .news_elem {
         justify-content: center; }
-  .main_section .main_title span {
+  .clubs_card .main_title span {
     font-size: 5rem; }
-  .main_section .club_wrap {
+  .clubs_card .container {
     margin-top: auto;
     padding: 0 20px; }
-    .main_section .club_wrap .container {
+    .clubs_card .container .club_wrap {
       text-align: center;
       padding: 2.5rem 1.25rem 0; }
   .main_footer .footer_content .container {
@@ -2093,25 +2160,31 @@ body {
 
 @media screen and (max-width: 900px) {
   .main_section .main_title span {
+    display: none; }
+  .main_head .logo {
     display: none; } }
 
 @media screen and (max-width: 850px) {
-  .schedule_section .main_title span {
+  .services_section .main_title span {
     display: none; }
-  .schedule_section .container .schedule_trainers .schedule_btn .btn {
+  .schedule_section .main_title span, .schedule_main .main_title span {
+    display: none; }
+  .schedule_section .container .schedule_trainers .schedule_btn .btn, .schedule_main .container .schedule_trainers .schedule_btn .btn {
     margin-top: auto;
     width: 6.875rem;
     margin-left: 0.9375rem; }
-  .schedule_section .container .schedule_trainers .schedule ul li {
+  .schedule_section .container .schedule_trainers .schedule ul li, .schedule_main .container .schedule_trainers .schedule ul li {
     font-size: 0.75rem; }
   .club_cards_section .main_title {
     font-size: 2.8125rem; }
     .club_cards_section .main_title span {
-      font-size: 3.75rem; }
+      display: none; }
   .club_cards_section .container .club_wrap .club_card {
     flex: 1 1 100%; }
   .club_cards_section .container .club_wrap .btn {
     bottom: -17%; }
+  .clubs_card .main_title span {
+    display: none; }
   .change_section .change_img:first-child {
     height: 400px; }
   .change_section .change_img:nth-child(2) {
@@ -2136,24 +2209,34 @@ body {
     flex-direction: column;
     align-items: center; }
     .gym_footer .main_nav {
+      margin-bottom: 1.875rem; }
+  .contacts_section .container .main_title span {
+    display: none; }
+  .contacts_section .container .content_contacts {
+    flex-wrap: wrap; }
+    .contacts_section .container .content_contacts .sofia_contacts {
       margin-bottom: 1.875rem; } }
 
 @media screen and (max-width: 650px) {
-  .schedule_section .main_title {
+  .main_head .container .adress {
+    font-size: 1rem; }
+    .main_head .container .adress span {
+      font-size: 0.9375rem; }
+  .schedule_section .main_title, .schedule_main .main_title {
     font-size: 1.875rem; }
-  .schedule_section .container {
+  .schedule_section .container, .schedule_main .container {
     padding: 0 0.9375rem; }
-    .schedule_section .container .schedule_trainers .schedule_btn .btn {
+    .schedule_section .container .schedule_trainers .schedule_btn .btn, .schedule_main .container .schedule_trainers .schedule_btn .btn {
       font-size: 0.75rem;
       width: 5.625rem;
       height: 2.5rem; }
-    .schedule_section .container .schedule_trainers .schedule ul li {
+    .schedule_section .container .schedule_trainers .schedule ul li, .schedule_main .container .schedule_trainers .schedule ul li {
       font-size: 0.75rem;
       text-align: center;
       flex-direction: column;
       height: 40px;
       line-height: 0.8; }
-      .schedule_section .container .schedule_trainers .schedule ul li span {
+      .schedule_section .container .schedule_trainers .schedule ul li span, .schedule_main .container .schedule_trainers .schedule ul li span {
         display: block; } }
 
 @media screen and (max-width: 600px) {
@@ -2186,7 +2269,11 @@ body {
   .articles .articles_content .article_wrap .container {
     padding: 0.9375rem; }
     .articles .articles_content .article_wrap .container .article_elem {
-      max-width: none; } }
+      max-width: none; }
+  .trainers_main .main_title {
+    font-size: 2.5rem; }
+    .trainers_main .main_title span {
+      display: none; } }
 
 @media screen and (max-width: 518px) {
   .club_cards_section .container .club_wrap .btn {

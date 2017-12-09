@@ -1,9 +1,25 @@
-.main_section {
+.trainer_info_section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    @include before_fig(100%, 100%, rgba(6, 6, 6, 0.85));
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .parallax {
+    position: absolute;
+  }
   .container {
+    z-index: 3;
     position: relative;
+    max-width: rem(1260px);
+    display: flex;
+    flex-direction: column;
     .content_trainer {
       width: 100%;
-      margin-top: rem(100px);
+      margin-top: rem(200px);
       display: flex;
       .trainer {
         max-width: rem(457px);
@@ -112,6 +128,7 @@
 
 /*slide trainer*/
 .trainer_slide {
+  margin-top: rem(100px);
   width: 100%;
   position: relative;
   z-index: 2;

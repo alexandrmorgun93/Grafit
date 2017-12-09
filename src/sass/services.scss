@@ -114,17 +114,20 @@
       flex-wrap: wrap;
       margin-top: rem(100px);
       .services_elem {
-        margin-left: rem(35px);
+        margin-right: rem(35px);
         margin-bottom: rem(35px);
         position: relative;
         display: flex;
-        max-width: rem(355px);
+        max-width: rem(360px);
         width: 100%;
+        height: rem(240px);
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         overflow: hidden;
         cursor: pointer;
+        &:nth-child(3n+3) {
+          margin-right: 0;
+        }
         &::before {
           @include before_fig(50%, 100%, #0d0d0d);
           opacity: 0.75;
@@ -151,7 +154,7 @@
 
           }
 
-          a {
+          .btn {
             visibility: visible;
             margin-top: rem(60px);
             opacity: 1;
@@ -168,6 +171,7 @@
           filter: grayscale(100%);
         }
         .elem_item {
+          width: 100%;
           position: absolute;
           z-index: 2;
         }
@@ -178,27 +182,15 @@
           color: #fefefe;
           text-align: center;
         }
-        a {
+        .btn {
           width: rem(149px);
           height: rem(50px);
           margin-left: rem(20px);
-          display: inline-flex;
-          justify-content: center;
-          align-items: center;
-          border: rem(3px) solid #ffffff;
-          font-size: rem(16px);
-          color: #ffffff;
-          transition: .4s;
-          visibility: hidden;
-          position: relative;
           opacity: 0;
           &:first-child {
             margin-left: 0;
           }
-          &:hover {
-            border: rem(3px) solid $yellow-color;
-            color: $yellow-color;
-          }
+
         }
       }
     }

@@ -69,8 +69,13 @@
       margin-left: 8px;
       flex: 1 1 rem(120px);
       max-width: 100%;
+      text-align: center;
       &:first-child {
         margin-left: 0;
+      }
+      .schedule_day {
+        font-size: rem(17px);
+        text-transform: uppercase;
       }
       li {
         display: flex;
@@ -83,21 +88,37 @@
         background-color: #fefdf9;
         font-size: rem(15px);
         cursor: pointer;
-        &:first-child {
-          font-size: rem(17px);
-          font-weight: 700;
-          background-color: #fff;
-          box-shadow:none;
-          text-transform: uppercase;
-        }
       }
     }
   }
 }
 
 /*schedule main*/
-.main_section {
+.schedule_main {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    @include before_fig(100%, 100%, rgba(6, 6, 6, 0.85));
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .parallax {
+    position: absolute;
+  }
+  .main_title {
+    z-index: 3;
+    text-align: center;
+    margin-top: rem(180px);
+    margin-bottom: rem(100px);
+    span {
+      left: 12%;
+      top: -100%;
+    }
+  }
   .container {
+    z-index: 3;
     .schedule_wrap {
       position: relative;
       width: 100%;
