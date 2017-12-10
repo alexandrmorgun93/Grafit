@@ -154,10 +154,10 @@
 
           }
 
-          .btn {
+          .btn_elem {
             visibility: visible;
-            margin-top: rem(60px);
-            opacity: 1;
+            margin-top: rem(50px);
+            opacity: 2;
           }
           img {
             filter: grayscale(0%);
@@ -175,26 +175,31 @@
           position: absolute;
           z-index: 2;
         }
-        h3 {
-          margin-top: rem(35px);
-          text-transform: uppercase;
-          font-size: rem(22px);
-          color: #fefefe;
-          text-align: center;
-        }
-        .btn {
-          width: rem(149px);
-          height: rem(50px);
-          margin-left: rem(20px);
-          opacity: 0;
-          &:first-child {
-            margin-left: 0;
+          h3 {
+            margin-top: rem(35px);
+            text-transform: uppercase;
+            font-size: rem(22px);
+            color: #fefefe;
+            text-align: center;
           }
-
-        }
+          .btn_elem {
+            display: flex;
+            justify-content: space-around;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility .4s;
+            .btn {
+              width: rem(149px);
+              height: rem(50px);
+              border: rem(3px) solid #ffffff;
+              &:hover {
+                background-color: #fff;
+                color: #0d0d0d;
+              }
+            }
+          }
       }
     }
-
   }
 }
 

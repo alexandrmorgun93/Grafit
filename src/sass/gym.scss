@@ -31,7 +31,7 @@
       .gym_text {
         max-width: rem(422px);
         width: 100%;
-
+        position: relative;
         p {
           font-family: 'Lato';
           font-size: rem(17px);
@@ -42,14 +42,18 @@
             margin-top: rem(30px);
           }
         }
+        .btn {
+          max-width: rem(391px);
+          width: 100%;
+        }
       }
 
       .gym_content_img {
-
         width: 50%;
         position: absolute;
         right: rem(-55px);
         top: rem(200px);
+        height: rem(370px);
         img {
           width: 100%;
           height: 100%;
@@ -62,7 +66,7 @@
       }
 
     }
-    .gym_footer{
+    .gym_footer {
       margin-top: rem(175px);
     }
   }

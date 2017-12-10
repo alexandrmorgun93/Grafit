@@ -2,6 +2,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
+  padding-bottom: rem(100px);
   &::before {
     @include before_fig(100%, 100%, rgba(6, 6, 6, 0.85));
     top: 0;

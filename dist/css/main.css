@@ -829,10 +829,10 @@ body {
         .services_section .container .services_content .services_elem:hover::after {
           opacity: 0.52;
           right: -50%; }
-        .services_section .container .services_content .services_elem:hover .btn {
+        .services_section .container .services_content .services_elem:hover .btn_elem {
           visibility: visible;
-          margin-top: 3.75rem;
-          opacity: 1; }
+          margin-top: 3.125rem;
+          opacity: 2; }
         .services_section .container .services_content .services_elem:hover img {
           filter: grayscale(0%); }
         .services_section .container .services_content .services_elem img {
@@ -850,13 +850,19 @@ body {
           font-size: 1.375rem;
           color: #fefefe;
           text-align: center; }
-        .services_section .container .services_content .services_elem .btn {
-          width: 9.3125rem;
-          height: 3.125rem;
-          margin-left: 1.25rem;
-          opacity: 0; }
-          .services_section .container .services_content .services_elem .btn:first-child {
-            margin-left: 0; }
+        .services_section .container .services_content .services_elem .btn_elem {
+          display: flex;
+          justify-content: space-around;
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility .4s; }
+          .services_section .container .services_content .services_elem .btn_elem .btn {
+            width: 9.3125rem;
+            height: 3.125rem;
+            border: 0.1875rem solid #ffffff; }
+            .services_section .container .services_content .services_elem .btn_elem .btn:hover {
+              background-color: #fff;
+              color: #0d0d0d; }
 
 .schedule_section {
   width: 100%;
@@ -1317,6 +1323,7 @@ body {
   .article_section .parallax {
     position: absolute; }
   .article_section .container_news .article_block_elem {
+    padding: 0 0.9375rem;
     margin-top: 13.4375rem;
     display: flex;
     flex-direction: column;
@@ -1391,7 +1398,8 @@ body {
       display: flex; }
       .gym_section .container .gym_content .gym_text {
         max-width: 26.375rem;
-        width: 100%; }
+        width: 100%;
+        position: relative; }
         .gym_section .container .gym_content .gym_text p {
           font-family: 'Lato';
           font-size: 1.0625rem;
@@ -1400,11 +1408,15 @@ body {
           text-indent: 1.25rem; }
           .gym_section .container .gym_content .gym_text p:nth-child(2) {
             margin-top: 1.875rem; }
+        .gym_section .container .gym_content .gym_text .btn {
+          max-width: 24.4375rem;
+          width: 100%; }
       .gym_section .container .gym_content .gym_content_img {
         width: 50%;
         position: absolute;
         right: -3.4375rem;
-        top: 12.5rem; }
+        top: 12.5rem;
+        height: 23.125rem; }
         .gym_section .container .gym_content .gym_content_img img {
           width: 100%;
           height: 100%;
@@ -1553,6 +1565,9 @@ body {
     width: 100%;
     z-index: 3;
     display: flex; }
+    .trainers_section .container .slide_trainers .trainers_elem {
+      max-width: 18.75rem;
+      width: 100%; }
     .trainers_section .container .slide_trainers .left_services {
       bottom: 27%;
       left: -20.1%; }
@@ -1631,6 +1646,7 @@ body {
       margin-top: 28%;
       width: 100%;
       z-index: 1;
+      opacity: .4;
       height: 20.4375rem; }
       .losing_weight .left_losing_weight .left_img img {
         width: 80%;
@@ -1638,11 +1654,12 @@ body {
   .losing_weight .right_losing_weight {
     width: 49%;
     position: relative;
+    z-index: 3;
     display: flex;
     justify-content: flex-start; }
     .losing_weight .right_losing_weight .right_losing_content {
       position: relative;
-      z-index: 3;
+      z-index: 4;
       width: 100%; }
       .losing_weight .right_losing_weight .right_losing_content div {
         max-width: 46.875rem;
@@ -1653,20 +1670,25 @@ body {
           width: 100%;
           height: 100%;
           object-fit: cover; }
-      .losing_weight .right_losing_weight .right_losing_content p {
-        max-width: 25rem;
-        width: 100%;
-        text-indent: 1.25rem;
-        font-family: 'Lato';
-        font-size: 1.0625rem;
-        font-weight: 400;
-        line-height: 1.41; }
+      .losing_weight .right_losing_weight .right_losing_content .losing_text {
+        position: relative;
+        z-index: 6;
+        background-color: transparent;
+        max-width: 28.125rem;
+        width: 100%; }
+        .losing_weight .right_losing_weight .right_losing_content .losing_text p {
+          width: 100%;
+          text-indent: 1.25rem;
+          font-family: 'Lato';
+          font-size: 1.0625rem;
+          line-height: 1.41; }
     .losing_weight .right_losing_weight .right_img {
       max-width: 28.125rem;
       width: 100%;
       position: absolute;
       right: 0;
-      z-index: 3;
+      z-index: 5;
+      opacity: .4;
       top: 8.75rem; }
       .losing_weight .right_losing_weight .right_img img {
         width: 100%;
@@ -1676,7 +1698,8 @@ body {
 .programs_section {
   width: 100%;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 6.25rem; }
   .programs_section::before {
     content: "";
     display: block;
@@ -1867,7 +1890,8 @@ body {
             font-family: 'Lato';
             font-size: 1.25rem;
             font-weight: 400; }
-        .trainer_info_section .container .content_trainer .trainer a {
+        .trainer_info_section .container .content_trainer .trainer .btn {
+          color: #ffffff;
           margin-top: 1.875rem;
           width: 100%; }
       .trainer_info_section .container .content_trainer .trainer_info {
@@ -1946,11 +1970,14 @@ body {
   .trainer_slide .slide_trainer_content {
     width: 100%;
     position: relative;
-    display: flex; }
+    display: flex;
+    height: 10.4375rem; }
     .trainer_slide .slide_trainer_content .slide_trainer_img {
       overflow: hidden;
-      flex: 1 1 20%;
-      height: 10.4375rem; }
+      flex: 1 1 30%;
+      width: 100%; }
+      .trainer_slide .slide_trainer_content .slide_trainer_img:nth-child(2n) {
+        flex: 1 1 50%; }
       .trainer_slide .slide_trainer_content .slide_trainer_img img {
         width: 100%;
         height: 100%;
@@ -2048,6 +2075,14 @@ body {
     top: -2.8125rem;
     font-size: 5.3125rem; } }
 
+@media screen and (max-width: 1680px) {
+  .trainers_section .container .slide_trainers .left_services {
+    left: 20%;
+    bottom: -36%; }
+  .trainers_section .container .slide_trainers .right_services {
+    top: 108%;
+    right: 19%; } }
+
 @media screen and (max-width: 1540px) {
   .change_section .change_img {
     opacity: .2; }
@@ -2064,6 +2099,27 @@ body {
       flex-direction: column; }
       .main_head .container .head_elem a:first-child {
         margin-bottom: 0.625rem; }
+  /*article*/
+  .article_section .container_news .article_block_elem .article_item {
+    max-width: 43.75rem; }
+  .gym_section .container {
+    z-index: 3; }
+    .gym_section .container .gym_content {
+      padding: 1.875rem 1.875rem 1.25rem;
+      overflow: hidden; }
+      .gym_section .container .gym_content .gym_text {
+        max-width: 100%;
+        z-index: 4; }
+      .gym_section .container .gym_content .gym_content_img {
+        width: 100%;
+        height: 100%;
+        opacity: .1; }
+        .gym_section .container .gym_content .gym_content_img:first-child {
+          bottom: 0;
+          right: 0; }
+        .gym_section .container .gym_content .gym_content_img:nth-child(2) {
+          left: 0;
+          top: 0; }
   .trainers_main .container .content_trainer {
     padding: 0 0.9375rem;
     justify-content: space-around; }
@@ -2085,6 +2141,13 @@ body {
     .club_cards_section .container .club_wrap .club_card {
       flex: 1 1 40%;
       text-align: center; }
+  .trainer_info_section .container {
+    padding: 0 0.9375rem; }
+    .trainer_info_section .container .content_trainer .trainer .trainer_name {
+      text-align: left; }
+    .trainer_info_section .container .video_trainer {
+      align-self: center;
+      margin-top: 3.125rem; }
   .services_section .container .services_content {
     padding: 0 0.9375rem;
     justify-content: space-around; }
@@ -2092,6 +2155,17 @@ body {
       margin-right: 0; } }
 
 @media screen and (max-width: 1200px) {
+  .programs_section .container {
+    padding: 0 0.9375rem; }
+    .programs_section .container .programs_content .programs_elem {
+      margin-left: 0; }
+  .gallery_section .container .photo_wrap {
+    padding: 0 0.9375rem; }
+    .gallery_section .container .photo_wrap .photo_elem {
+      flex: 1 1 45%;
+      height: 300px; }
+  .trainers_section .container .slide_trainers .trainers_elem {
+    flex: 1 1 18.75rem; }
   .schedule_section .main_title, .schedule_main .main_title {
     font-size: 2.5rem; }
     .schedule_section .main_title span, .schedule_main .main_title span {
@@ -2136,9 +2210,25 @@ body {
   .main_footer .footer_content .container {
     padding: 0 3.125rem; } }
 
+@media screen and (max-width: 1100px) {
+  .directions .container .direction_wrap {
+    margin-left: 1.875rem; }
+    .directions .container .direction_wrap ul li {
+      margin-left: 2.5rem; }
+    .directions .container .direction_wrap p {
+      max-width: 100%; } }
+
 @media screen and (max-width: 1030px) {
   .club_cards_section .container .club_wrap .btn {
     bottom: -17%; }
+  .trainer_info_section .container .content_trainer {
+    flex-direction: column;
+    align-items: center; }
+    .trainer_info_section .container .content_trainer .trainer_info {
+      margin-top: 3.125rem; }
+  .trainer_info_section .container .video_trainer {
+    align-self: center;
+    margin-top: 3.125rem; }
   .articles .articles_content .main_line .main_title {
     font-size: 2.5rem; }
     .articles .articles_content .main_line .main_title span {
@@ -2162,11 +2252,47 @@ body {
   .main_section .main_title span {
     display: none; }
   .main_head .logo {
-    display: none; } }
+    display: none; }
+  .directions .container h2 {
+    text-align: center; }
+  .directions .container .direction_wrap {
+    margin-left: 0;
+    padding: 0 0.9375rem; }
+    .directions .container .direction_wrap ul {
+      flex-direction: column;
+      align-items: center; }
+      .directions .container .direction_wrap ul li {
+        margin-left: 0;
+        margin-bottom: 0.625rem; }
+  /*article*/
+  .article_section .container_news .article_block_elem {
+    justify-content: flex-end; }
+    .article_section .container_news .article_block_elem .article_item {
+      max-width: 31.25rem;
+      opacity: .7; }
+      .article_section .container_news .article_block_elem .article_item h4 {
+        font-size: 1.5625rem; }
+      .article_section .container_news .article_block_elem .article_item .article_date {
+        max-width: 18.75rem; } }
 
 @media screen and (max-width: 850px) {
+  .programs_section .main_title {
+    font-size: 2.5rem; }
+    .programs_section .main_title span {
+      display: none; }
   .services_section .main_title span {
     display: none; }
+  .gym_section .main_title {
+    font-size: 2.5rem; }
+    .gym_section .main_title span {
+      display: none; }
+  .trainer_info_section .trainer_slide .photo_head {
+    margin-right: 0; }
+  .trainer_info_section .trainer_slide .slide_trainer_content {
+    margin-bottom: 4.375rem; }
+    .trainer_info_section .trainer_slide .slide_trainer_content .slider_btn {
+      top: 100%;
+      width: 10.625rem; }
   .schedule_section .main_title span, .schedule_main .main_title span {
     display: none; }
   .schedule_section .container .schedule_trainers .schedule_btn .btn, .schedule_main .container .schedule_trainers .schedule_btn .btn {
@@ -2222,6 +2348,15 @@ body {
     font-size: 1rem; }
     .main_head .container .adress span {
       font-size: 0.9375rem; }
+  /*article*/
+  .article_section .container_news .article_block_elem .article_item {
+    padding: 0.625rem;
+    max-width: 18.125rem;
+    height: 9.375rem; }
+    .article_section .container_news .article_block_elem .article_item h4 {
+      font-size: 0.75rem; }
+    .article_section .container_news .article_block_elem .article_item .article_date {
+      max-width: 15.625rem; }
   .schedule_section .main_title, .schedule_main .main_title {
     font-size: 1.875rem; }
   .schedule_section .container, .schedule_main .container {
@@ -2252,6 +2387,14 @@ body {
       padding: 0 1.25rem; }
       .change_section .change_right .change_content .title_item {
         margin-top: 1.5625rem; }
+  .gallery_section .main_title {
+    font-size: 2.5rem; }
+    .gallery_section .main_title span {
+      display: none; }
+  .gallery_section .container .photo_wrap {
+    padding: 0 0.9375rem; }
+    .gallery_section .container .photo_wrap .photo_elem {
+      flex: 1 1 100%; }
   .news_section .news_content .news_wrap .container .news .news_elem {
     margin-top: 0.625rem;
     flex-direction: column;
@@ -2276,7 +2419,20 @@ body {
       display: none; } }
 
 @media screen and (max-width: 518px) {
+  .programs_section .container .programs_content .programs_elem .programs_img h2 {
+    font-size: 0.9375rem; }
+  .programs_section .container .programs_content .programs_elem .programs_text {
+    padding: 1.875rem; }
+    .programs_section .container .programs_content .programs_elem .programs_text .programs_btn .btn {
+      width: 8.125rem; }
   .club_cards_section .container .club_wrap .btn {
-    bottom: -7%; } }
+    bottom: -7%; }
+  .trainer_info_section .trainer_slide .slide_trainer_content .slider_btn {
+    width: 7.1875rem; }
+  .services_section .container .services_content .services_elem .elem_item h3 {
+    font-size: 1.125rem; }
+  .services_section .container .services_content .services_elem .elem_item .btn_elem .btn {
+    width: 7.1875rem;
+    font-size: 0.8125rem; } }
 
 /*# sourceMappingURL=main.css.map*/

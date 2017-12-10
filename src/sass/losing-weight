@@ -38,6 +38,7 @@
       margin-top: 28%;
       width: 100%;
       z-index: 1;
+      opacity: .4;
       height: rem(327px);
       img {
         width: 80%;
@@ -49,11 +50,12 @@
   .right_losing_weight {
     width: 49%;
     position: relative;
+    z-index: 3;
     display: flex;
     justify-content: flex-start;
     .right_losing_content {
       position: relative;
-      z-index: 3;
+      z-index: 4;
       width: 100%;
       div {
         max-width: rem(750px);
@@ -67,14 +69,19 @@
         }
 
       }
-      p {
-        max-width: rem(400px);
+      .losing_text {
+        position: relative;
+        z-index: 6;
+        background-color: transparent;
+        max-width: rem(450px);
         width: 100%;
-        text-indent: rem(20px);
-        font-family: 'Lato';
-        font-size: rem(17px);
-        font-weight: 400;
-        line-height: 1.41;
+        p {
+          width: 100%;
+          text-indent: rem(20px);
+          font-family: 'Lato';
+          font-size: rem(17px);
+          line-height: 1.41;
+        }
       }
     }
     .right_img {
@@ -82,7 +89,8 @@
       width: 100%;
       position: absolute;
       right: 0;
-      z-index: 3;
+      z-index: 5;
+      opacity: .4;
       top: rem(140px);
       img {
         width: 100%;

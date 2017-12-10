@@ -53,7 +53,8 @@
             font-weight: 400;
           }
         }
-        a {
+        .btn {
+          color: #ffffff;
           margin-top: rem(30px);
           width: 100%;
         }
@@ -135,7 +136,6 @@
   display: flex;
   flex-direction: column;
   .photo_head {
-
     max-width: rem(585px);
     width: 100%;
     display: flex;
@@ -153,10 +153,14 @@
     width: 100%;
     position: relative;
     display: flex;
+    height: rem(167px);
     .slide_trainer_img {
       overflow: hidden;
-      flex: 1 1 20%;
-      height: rem(167px);
+      flex: 1 1 30%;
+      width: 100%;
+        &:nth-child(2n){
+          flex: 1 1 50%;
+        }
       img {
         width: 100%;
         height: 100%;

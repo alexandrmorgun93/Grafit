@@ -14,6 +14,24 @@
   }
 }
 
+@media screen and (max-width: 1680px) {
+  //TRAINERS SLIDE
+  .trainers_section {
+    .container {
+      .slide_trainers {
+        .left_services {
+          left: 20%;
+          bottom: -36%;
+        }
+        .right_services {
+          top: 108%;
+          right: 19%;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1540px) {
   //CHANGE SECTION
   .change_section {
@@ -43,6 +61,45 @@
         a {
           &:first-child {
             margin-bottom: rem(10px);
+          }
+        }
+      }
+    }
+  }
+  /*article*/
+  .article_section {
+    .container_news {
+      .article_block_elem {
+        .article_item {
+          max-width: rem(700px);
+        }
+      }
+    }
+  }
+  //GYM SECTION
+  .gym_section {
+    .container {
+      z-index: 3;
+      .gym_content {
+        padding: rem(30px) rem(30px) rem(20px);
+        overflow: hidden;
+        .gym_text {
+          max-width: 100%;
+          z-index: 4;
+        }
+        .gym_content_img {
+          width: 100%;
+          height: 100%;
+          opacity: .1;
+          &:first-child {
+            bottom: 0;
+            right: 0;
+
+          }
+          &:nth-child(2) {
+            left: 0;
+            top: 0;
+
           }
         }
       }
@@ -92,6 +149,23 @@
       }
     }
   }
+  //TRAINER INFO
+  .trainer_info_section {
+    .container {
+      padding: 0 rem(15px);
+      .content_trainer {
+        .trainer {
+          .trainer_name {
+            text-align: left;
+          }
+        }
+      }
+      .video_trainer {
+        align-self: center;
+        margin-top: rem(50px);
+      }
+    }
+  }
   //SERVICES SECTION
   .services_section {
     .container {
@@ -119,8 +193,41 @@
 }
 
 @media screen and (max-width: 1200px) {
-  //SHEDULE SECTION
-  .schedule_section, .schedule_main{
+  //PROGRAMS
+  .programs_section {
+    .container {
+      padding: 0 rem(15px);
+      .programs_content {
+        .programs_elem {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  //GALLERY PHOTO
+  .gallery_section {
+    .container {
+      .photo_wrap {
+        padding: 0 rem(15px);
+        .photo_elem {
+          flex: 1 1 45%;
+          height: 300px;
+        }
+      }
+    }
+  }
+  //TRAINERS SLIDE
+  .trainers_section {
+    .container {
+      .slide_trainers {
+        .trainers_elem {
+          flex: 1 1 rem(300px);
+        }
+      }
+    }
+  }
+  //SCHEDULE SECTION
+  .schedule_section, .schedule_main {
     .main_title {
       font-size: rem(40px);
       span {
@@ -201,6 +308,25 @@
   }
 }
 
+@media screen and (max-width: 1100px) {
+  //DIRECTIONS
+  .directions {
+    .container {
+      .direction_wrap {
+        margin-left: rem(30px);
+        ul {
+          li {
+            margin-left: rem(40px);
+          }
+        }
+        p {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1030px) {
   //CLUB CURDS
   .club_cards_section {
@@ -209,6 +335,22 @@
         .btn {
           bottom: -17%;
         }
+      }
+    }
+  }
+  //TRAINER INFO
+  .trainer_info_section {
+    .container {
+      .content_trainer {
+        flex-direction: column;
+        align-items: center;
+        .trainer_info {
+          margin-top: rem(50px);
+        }
+      }
+      .video_trainer {
+        align-self: center;
+        margin-top: rem(50px);
       }
     }
   }
@@ -244,6 +386,18 @@
       }
     }
   }
+  //LOSING WEIGHT
+  .losing_weight {
+    .left_losing_weight {
+      .left_losing_content {
+        div {
+          img {
+
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -259,9 +413,56 @@
       display: none;
     }
   }
+  //DIRECTIONS
+  .directions {
+    .container {
+      h2 {
+        text-align: center;
+      }
+      .direction_wrap {
+        margin-left: 0;
+        padding: 0 rem(15px);
+        ul {
+          flex-direction: column;
+          align-items: center;
+          li {
+            margin-left: 0;
+            margin-bottom: rem(10px);
+          }
+        }
+      }
+    }
+  }
+  /*article*/
+  .article_section {
+    .container_news {
+      .article_block_elem {
+        justify-content: flex-end;
+        .article_item {
+          max-width: rem(500px);
+          opacity: .7;
+          h4 {
+            font-size: rem(25px);
+          }
+          .article_date {
+            max-width: rem(300px);
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 850px) {
+  //PROGRAMS
+  .programs_section {
+    .main_title {
+      font-size: rem(40px);
+      span {
+        display: none;
+      }
+    }
+  }
   //SERVICES SECTION
   .services_section {
     .main_title {
@@ -270,8 +471,32 @@
       }
     }
   }
+  //GYM SECTION
+  .gym_section {
+    .main_title {
+      font-size: rem(40px);
+      span {
+        display: none;
+      }
+    }
+  }
+  //TRAINER INFO
+  .trainer_info_section {
+    .trainer_slide {
+      .photo_head {
+        margin-right: 0;
+      }
+      .slide_trainer_content {
+        margin-bottom: rem(70px);
+        .slider_btn {
+          top: 100%;
+          width: rem(170px);
+        }
+      }
+    }
+  }
   //SChEDULE SECTION
-  .schedule_section, .schedule_main{
+  .schedule_section, .schedule_main {
     .main_title {
       span {
         display: none;
@@ -415,6 +640,25 @@
       }
     }
   }
+  /*article*/
+  .article_section {
+    .container_news {
+      .article_block_elem {
+        .article_item {
+          padding: rem(10px);
+          max-width: rem(290px);
+          height: rem(150px);
+          h4 {
+            font-size: rem(12px);
+          }
+          .article_date {
+            max-width: rem(250px);
+          }
+        }
+      }
+    }
+  }
+
   //SChEDULE SECTION
   .schedule_section, .schedule_main {
     .main_title {
@@ -447,6 +691,7 @@
       }
     }
   }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -465,6 +710,23 @@
       .change_content {
         .title_item {
           margin-top: rem(25px);
+        }
+      }
+    }
+  }
+  //GALLERY PHOTO
+  .gallery_section {
+    .main_title {
+      font-size: rem(40px);
+      span {
+        display: none;
+      }
+    }
+    .container {
+      .photo_wrap {
+        padding: 0 rem(15px);
+        .photo_elem {
+          flex: 1 1 100%;
         }
       }
     }
@@ -531,6 +793,30 @@
 }
 
 @media screen and (max-width: 518px) {
+  //PROGRAMS
+  .programs_section {
+    .container {
+      .programs_content {
+        .programs_elem {
+          .programs_img {
+            h2 {
+              font-size: rem(15px);
+            }
+          }
+          .programs_text {
+            padding: rem(30px);
+            .programs_btn {
+              .btn {
+                width: rem(130px);
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+  //CLUB CARD
   .club_cards_section {
     .container {
       .club_wrap {
@@ -540,4 +826,35 @@
       }
     }
   }
+  //SLIDER TRAINERS
+  .trainer_info_section {
+    .trainer_slide {
+      .slide_trainer_content {
+        .slider_btn {
+          width: rem(115px);
+        }
+      }
+    }
+  }
+  //SERVICES SECTION
+  .services_section {
+    .container {
+      .services_content {
+        .services_elem {
+          .elem_item {
+            h3 {
+              font-size: rem(18px);
+            }
+            .btn_elem {
+              .btn {
+                width: rem(115px);
+                font-size: rem(13px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
