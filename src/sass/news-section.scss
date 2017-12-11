@@ -54,7 +54,9 @@
       flex-wrap: wrap;
       justify-content: space-between;
       .news_elem {
-        max-width: rem(650px);
+
+        display: flex;
+        flex: 1 1 650px;
         width: 100%;
         margin-bottom: rem(60px);
         .news_text {
@@ -66,20 +68,24 @@
           }
         }
         &:nth-child(even) {
+          justify-content: flex-start;
           top: rem(70px);
           &::after {
             @include before_fig(rem(130px), rem(3px), $yellow-color);
             top: 50%;
             right: rem(-130px);
             opacity: 0.25;
+            z-index: -1;
           }
         }
         &:nth-child(odd) {
+          justify-content: flex-end;
           &::before {
             @include before_fig(rem(130px), rem(3px), $yellow-color);
             top: 50%;
             left: rem(-130px);
             opacity: 0.25;
+            z-index: -1;
           }
         }
       }
@@ -87,7 +93,7 @@
         width: rem(3px);
         background-color: $yellow-color;
         height: 90%;
-        z-index: 5;
+        z-index: -1;
         position: absolute;
         top: 0;
         left: 50%;
