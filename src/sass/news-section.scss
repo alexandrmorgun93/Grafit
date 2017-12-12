@@ -49,6 +49,7 @@
 .main_section {
   .container_news {
     .container_news_wrap {
+      padding: 0 rem(15px);
       margin-top: rem(60px);
       display: flex;
       flex-wrap: wrap;
@@ -56,9 +57,9 @@
       .news_elem {
 
         display: flex;
-        flex: 1 1 650px;
-        width: 100%;
+        width: calc(50% - 80px);
         margin-bottom: rem(60px);
+        height: rem(320px);
         .news_text {
           padding-right: rem(50px);
           max-width: rem(355px);
@@ -70,10 +71,10 @@
         &:nth-child(even) {
           justify-content: flex-start;
           top: rem(70px);
-          &::after {
+          &::before {
             @include before_fig(rem(130px), rem(3px), $yellow-color);
             top: 50%;
-            right: rem(-130px);
+            right: rem(-79px);
             opacity: 0.25;
             z-index: -1;
           }
@@ -83,7 +84,7 @@
           &::before {
             @include before_fig(rem(130px), rem(3px), $yellow-color);
             top: 50%;
-            left: rem(-130px);
+            left: rem(-79px);
             opacity: 0.25;
             z-index: -1;
           }

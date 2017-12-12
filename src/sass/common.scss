@@ -265,7 +265,7 @@ body {
     background-color: #fff;
     max-width: rem(292px);
     width: 100%;
-    padding: rem(40px) rem(20px) rem(40px) rem(40px);
+    padding: rem(40px) rem(20px) 0 rem(40px);
     .content_title {
       color: #1f1f1f;
       font-size: rem(17px);
@@ -286,10 +286,11 @@ body {
       font-size: rem(17px);
       font-weight: 400;
       line-height: 1.41;
+      max-height: rem(70px);
+      overflow: hidden;
     }
     .btn {
       width: rem(165px);
-      margin-top: rem(40px);
     }
   }
 
