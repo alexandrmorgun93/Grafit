@@ -95,6 +95,21 @@ let p = new Parallax('.parallax', {
 }).init();
 
 /*END PARALLAX*/
+// BEGIN MENU LIST
+let menuListOpen = document.querySelectorAll('.icon-right-open');
+let menuList = document.querySelectorAll('.more_list');
+
+function menuOpenHand(menuListOpen, menuList) {
+    for (let i = 0; i < menuListOpen.length; i++) {
+        menuListOpen[i].addEventListener('click', function () {
+            menuList.classList.add('active');
+        });
+    }
+}
+
+menuOpenHand(menuListOpen, menuList);
+
+// END MENU LIST
 
 // function menuCansel(menuClose) {
 //     menuClose.addEventListener('click', () => {

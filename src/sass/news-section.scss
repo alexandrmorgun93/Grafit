@@ -55,9 +55,9 @@
       flex-wrap: wrap;
       justify-content: space-between;
       .news_elem {
-
         display: flex;
-        width: calc(50% - 80px);
+        max-width: calc(50% - 114px);
+        flex: 1 1 50%;
         margin-bottom: rem(60px);
         height: rem(320px);
         .news_text {
@@ -72,9 +72,9 @@
           justify-content: flex-start;
           top: rem(70px);
           &::before {
-            @include before_fig(rem(130px), rem(3px), $yellow-color);
+            @include before_fig(rem(114px), rem(3px), $yellow-color);
             top: 50%;
-            right: rem(-79px);
+            right: -114px;
             opacity: 0.25;
             z-index: -1;
           }
@@ -82,9 +82,9 @@
         &:nth-child(odd) {
           justify-content: flex-end;
           &::before {
-            @include before_fig(rem(130px), rem(3px), $yellow-color);
+            @include before_fig(rem(114px), rem(3px), $yellow-color);
             top: 50%;
-            left: rem(-79px);
+            left: -114px;
             opacity: 0.25;
             z-index: -1;
           }

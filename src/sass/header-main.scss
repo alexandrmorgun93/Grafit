@@ -54,45 +54,46 @@
 /*MENU*/
 
 .menu {
+  //padding-bottom: rem(100px);
   position: fixed;
   left: 0;
   top: 0;
   z-index: 100;
-  padding: rem(115px) 0 rem(95px);
-  background-image: url_css('img/menu-bg.png');
+  background: url_css('img/menu-bg.png') no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
   visibility: hidden;
+  height: 100%;
+  &::before {
+    @include before_fig(100%, 100%, rgba(31, 31, 31, .8));
+    top: 0;
+    left: 0;
+  }
   &.active {
     visibility: visible;
   }
   .container {
+    height: 100vh;
+    padding: rem(90px) 0 rem(90px);
     position: relative;
-    top: 0;
-    left: 0;
-    display: -webkit-flex;
-    display: -ms-flex;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 3;
     .menu_head {
       display: flex;
-      justify-content: space-between;
       width: 100%;
-
+      justify-content: space-between;
       .logo {
         max-width: rem(260px);
         width: 100%;
         overflow: hidden;
-
         img {
           width: 100%;
           height: 100%;
         }
       }
-
       .icon-cancel {
         position: relative;
         width: 53px;
@@ -112,14 +113,13 @@
         }
       }
     }
-
     .menu_list {
+      margin-top: rem(50px);
       width: 100%;
-      margin-top: rem(80px);
-      column-count: 3;
       display: flex;
       justify-content: space-between;
-
+      position: relative;
+      z-index: 3;
       .menu_list-item {
         .more_list {
           position: relative;
@@ -128,15 +128,27 @@
           font-weight: 700;
           font-size: rem(30px);
           text-transform: uppercase;
-
-          &:hover {
+          &:active {
             .more_list-item {
               visibility: visible;
-              margin-top: 0;
               opacity: 1;
-              transition: 0.3s;
-              z-index: 0;
+              transition: .3s;
+              transition-delay: .2s;
+              height: auto;
             }
+          }
+          .icon-right-open {
+            position: absolute;
+            transform: rotate(90deg);
+            font-size: rem(33px);
+            border: rem(2px) solid #ffff;
+            margin-left: rem(12px);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: rem(40px);
+            height: rem(40px);
+            visibility: hidden;
           }
 
           &::before {
@@ -144,25 +156,22 @@
             top: rem(15px);
             left: rem(-10px);
           }
-
           &:first-child {
             padding-top: 0;
           }
-
           a {
             transition: 0.2s;
-
             &:hover {
               color: $yellow-color;
             }
           }
 
           .more_list-item {
-            visibility: hidden;
-            margin-top: calc(-100% + 139px);
+            visibility: collapse;
+            //margin-top: calc(-100% + 139px);
+            height: 0;
             opacity: 0;
             position: relative;
-            z-index: -1;
 
             li {
               position: relative;
@@ -178,14 +187,15 @@
               a {
                 position: relative;
                 display: inline-block;
-                transition: 0.3s;
-
+                //border-bottom: transparent;
                 &:hover {
-                  color: inherit;
+                  color: #ffffff;
+                  //border-bottom: rem(1px) solid $yellow-color;
+                  //transition: border-bottom-color .2s;
 
                   &::before {
                     @include before_fig(100%, rem(1px), $yellow-color);
-                    bottom: 0;
+                    bottom: -1px;
                   }
                 }
               }
@@ -194,24 +204,25 @@
         }
       }
     }
+  }
+  .menu_adress {
+    position: absolute;
+    bottom: rem(50px);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .contacts {
+      .adress {
+        color: $yellow-color;
+        &:first-child {
+          margin-left: 0;
+        }
 
-    .menu_adress {
-      display: flex;
-      margin-top: rem(90px);
-      justify-content: space-between;
-      width: 100%;
-
-      .contacts {
-        .adress {
-          &:first-child {
-            margin-left: 0;
-          }
-
-          span {
-            color: #ffffff;
-          }
+        span {
+          color: #ffffff;
         }
       }
     }
   }
 }
+
