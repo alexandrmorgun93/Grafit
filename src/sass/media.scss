@@ -84,22 +84,22 @@
   }
 }
 
-@media screen and (max-width: 1400px) {
-  //MENU
-  .menu {
-    .container {
-      padding: rem(30px) rem(15px) rem(70px);
-      .menu_list {
-        margin-top: rem(30px);
-        .menu_list-item {
-          .more_list {
-            //font-size: 20px;
-          }
-        }
-      }
-    }
-  }
-}
+//@media screen and (max-width: 1400px) {
+//  //MENU
+//  .menu {
+//    .container {
+//      padding: rem(30px) rem(15px) rem(70px);
+//      .menu_list {
+//        margin-top: rem(30px);
+//        .menu_list-item {
+//          .more_list {
+//            //font-size: 20px;
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
 
 @media screen and (max-width: 1280px) {
   //HEADER
@@ -112,6 +112,24 @@
         a {
           &:first-child {
             margin-bottom: rem(10px);
+          }
+        }
+      }
+    }
+  }
+  //MENU
+  .menu {
+    .menu_wrap {
+      .container {
+        .menu_head {
+          .menu_content {
+            .menu_elem {
+              .elem {
+                .menu_btn_elem {
+                  display: block;
+                }
+              }
+            }
           }
         }
       }
@@ -316,17 +334,22 @@
 
 @media screen and (min-width: 1280px) {
   .menu {
-    .container {
-      .menu_list {
-        .menu_list-item {
-          .more_list {
-            &:hover {
-              .more_list-item {
-                visibility: visible;
-                opacity: 1;
-                transition: .3s;
-                transition-delay: .2s;
-                height: auto;
+    .menu_wrap {
+      .container {
+        .menu_content {
+          .menu_elem {
+            .elem {
+              &:hover {
+                .menu_title {
+                  color: $yellow-color;
+                }
+                .menu_item {
+                  visibility: visible;
+                  opacity: 1;
+                  transition: .3s;
+                  transition-delay: .2s;
+                  height: auto;
+                }
               }
             }
           }
@@ -469,22 +492,7 @@
       }
     }
   }
-  //MENU
-  .menu {
-    .container {
-      .menu_list {
-        flex-direction: column;
-        .menu_list-item {
-          .more_list {
-            //font-size: 20px;
-            .icon-right-open {
-              visibility: visible;
-            }
-          }
-        }
-      }
-    }
-  }
+
   //VIDEO SLIDE
   .video_wrap {
     .container {

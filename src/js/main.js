@@ -19,18 +19,18 @@ let p = new Parallax('.parallax', {
 
 /*END PARALLAX*/
 // BEGIN MENU LIST
-let menuListOpen = document.querySelectorAll('.icon-right-open');
-let menuList = document.querySelectorAll('.more_list');
 
-function menuOpenHand(menuListOpen, menuList) {
-    for (let i = 0; i < menuListOpen.length; i++) {
-        menuListOpen[i].addEventListener('click', function () {
-            menuList.classList.add('active');
-        });
+let menuList = document.querySelectorAll('.elem');
+
+function menuHand(menuList) {
+    for (let i = 0; i < menuList.length; i++) {
+        menuList[i].addEventListener('click', () => {
+            this.classList.toggle('active');
+        })
     }
 }
 
-menuOpenHand(menuListOpen, menuList);
+menuHand(menuList);
 
 // END MENU LIST
 

@@ -67,6 +67,17 @@ body {
   }
 }
 
+.adress {
+  font-size: rem(25px);
+  color: $yellow-color;
+  span {
+    color: #ffffff;
+    font-size: rem(20px);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
 /*---------------*/
 .main_title {
   position: relative;
