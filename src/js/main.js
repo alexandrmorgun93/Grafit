@@ -3,13 +3,16 @@ let btn = document.querySelector('.btn_mobile');
 let menu = document.querySelector('.menu');
 let menuClose = document.querySelector('.icon-cancel');
 
-function menuOpen(btn, menu) {
-    btn.addEventListener('click', () => {
-        menu.classList.add('active');
-    });
-}
 
-menuOpen(btn, menu);
+btn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
+
+menuClose.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
 
 /*BEGIN PARALLAX*/
 const Parallax = require('scroll-parallax');
@@ -20,17 +23,13 @@ let p = new Parallax('.parallax', {
 /*END PARALLAX*/
 // BEGIN MENU LIST
 
-let menuList = document.querySelectorAll('.elem');
+let menuList = document.querySelectorAll('.menu_btn_elem');
 
-function menuHand(menuList) {
-    for (let i = 0; i < menuList.length; i++) {
-        menuList[i].addEventListener('click', () => {
-            this.classList.toggle('active');
-        })
-    }
+for (let i = 0; i < menuList.length; i++) {
+    menuList[i].addEventListener('click', function () {
+        this.parentElement.classList.toggle('active');
+    });
 }
-
-menuHand(menuList);
 
 // END MENU LIST
 

@@ -68,7 +68,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-module.exports = __webpack_require__(4);
+module.exports = __webpack_require__(2);
 
 
 /***/ }),
@@ -80,16 +80,19 @@ let btn = document.querySelector('.btn_mobile');
 let menu = document.querySelector('.menu');
 let menuClose = document.querySelector('.icon-cancel');
 
-function menuOpen(btn, menu) {
-    btn.addEventListener('click', () => {
-        menu.classList.add('active');
-    });
-}
 
-menuOpen(btn, menu);
+btn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
+
+menuClose.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
 
 /*BEGIN PARALLAX*/
-const Parallax = __webpack_require__(2);
+const Parallax = __webpack_require__(7);
 let p = new Parallax('.parallax', {
     intensity: 30
 }).init();
@@ -97,17 +100,13 @@ let p = new Parallax('.parallax', {
 /*END PARALLAX*/
 // BEGIN MENU LIST
 
-let menuList = document.querySelectorAll('.elem');
+let menuList = document.querySelectorAll('.menu_btn_elem');
 
-function menuHand(menuList) {
-    for (let i = 0; i < menuList.length; i++) {
-        menuList[i].addEventListener('click', () => {
-            this.classList.toggle('active');
-        })
-    }
+for (let i = 0; i < menuList.length; i++) {
+    menuList[i].addEventListener('click', function () {
+        this.parentElement.classList.toggle('active');
+    });
 }
-
-menuHand(menuList);
 
 // END MENU LIST
 
@@ -168,13 +167,23 @@ menuHand(menuList);
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // use here your library name
-module.exports = __webpack_require__(3)
+module.exports = __webpack_require__(8)
 
 /***/ }),
-/* 3 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -748,12 +757,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
   module.exports = Parallax;
 });
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

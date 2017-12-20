@@ -7,7 +7,7 @@
   left: 0;
   z-index: 20;
   background-color: #000000;
-  //opacity: 0.85;
+  opacity: 0.85;
   display: flex;
   .container {
     display: flex;
@@ -51,7 +51,7 @@
   background-size: cover;
   visibility: hidden;
   opacity: 0;
-  transition: top .4s;
+  transition: .4s;
   width: 100%;
   height: 100vh;
   &.active {
@@ -64,14 +64,14 @@
     z-index: 1;
   }
   .menu_wrap {
-    padding: rem(100px) 0 rem(90px);
+    padding-top: rem(100px);
     width: 100%;
     position: relative;
     z-index: 3;
-    overflow-y: scroll;
-    overflow-x: hidden;
     height: 100%;
     .container {
+      overflow-x: auto;
+      overflow-y: hidden;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -79,7 +79,6 @@
       height: 100%;
       .menu_head {
         width: 100%;
-        flex: 1 1 100%;
         .head_elem {
           position: relative;
           width: 100%;
@@ -118,6 +117,23 @@
               display: inline-block;
               min-height: rem(75px);
               position: relative;
+              &.active {
+                .menu_title {
+                  color: $yellow-color;
+                }
+                .menu_item {
+                  height: auto;
+                  margin-bottom: rem(10px);
+                  opacity: 1;
+                  visibility: visible;
+                  transition: .3s;
+                  transition-delay: .2s;
+                }
+                .menu_btn_elem {
+                  transform: rotate(180deg);
+                  color: $yellow-color;
+                }
+              }
               .menu_title {
                 color: #f8f8f8;
                 font-family: "Proxima Nova";
@@ -151,7 +167,6 @@
                     transition: .3s;
                   }
                   &:hover::before {
-                    left: 0;
                     width: 100%;
                   }
                 }
@@ -175,23 +190,6 @@
                   color: inherit;
                 }
               }
-              &.active {
-                .menu_title {
-                  color: $yellow-color;
-                }
-                .menu_item {
-                  height: auto;
-                  margin-bottom: rem(10px);
-                  opacity: 1;
-                  visibility: visible;
-                  transition: .3s;
-                  transition-delay: .2s;
-                }
-                .menu_btn_elem {
-                  transform: rotate(180deg);
-                  color: $yellow-color;
-                }
-              }
             }
           }
         }
@@ -199,7 +197,7 @@
       .menu_bottom {
         position: relative;
         left: 0;
-        bottom: 0;
+        bottom: rem(90px);
         width: 100%;
         display: flex;
         flex: 1 1 100%;
